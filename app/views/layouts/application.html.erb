@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>WdiConf</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+<a href="/" class="">Home</a>
+<a href="/about" class="">About</a>
+<a href="/events/timetable" class="">Schedule</a>
+
+<%= yield %>
+
+
+<style>
+  body {
+    background-color: tomato;
+  }
+</style>
+</body>
+</html>
