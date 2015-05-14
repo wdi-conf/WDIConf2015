@@ -1,0 +1,15 @@
+ <%= form_for [:admins, @event] do |f| %>  <!--need :admins since namespaced-->
+    <%= f.label :title %>
+    <%= f.text_field :title %>
+
+    <%= f.label :description %>
+    <%= f.text_field :description %>
+
+     <%= f.label :datetime_field %>
+     <%= f.text_field :datetime_field %>
+
+     <%= f.label :max_tix %>
+     <%= f.text_field :max_tix %>
+
+    <%= f.submit %>
+ <% end %>

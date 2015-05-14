@@ -6,4 +6,9 @@ Rails.application.routes.draw do
 
   get '/about' => 'pages#about'
 
+  # namespaces the admin to /admin/* paths
+  namespace :admins do
+    resources :events, :users
+  end
+
 end

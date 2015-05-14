@@ -1,0 +1,15 @@
+<h2>Events</h2>
+
+<% @events.each do |event| %>
+    <p>
+        <%= link_to event.title, event_path(event) %> <br>
+        <%= link_to 'edit', edit_event_path(event) %>
+
+        <!--refactored version of the above-->
+        <%= form_for event, :method => :delete do |f| %>
+            <button>delete</button> <!--<%#= f.submit 'delete' %> -->
+        <% end %>
+    </p>
+<% end %>
+
+

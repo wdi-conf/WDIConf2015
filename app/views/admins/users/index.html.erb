@@ -1,0 +1,14 @@
+<h2>Users</h2>
+
+<% @users.each do |user| %>
+    <p>
+        <%= link_to user.name, user_path(user) %> <br>
+        <%= link_to 'edit', edit_user_path(user) %>
+
+        <!--refactored version of the above-->
+        <%= form_for user, :method => :delete do |f| %>
+            <button>delete</button> <!--<%#= f.submit 'delete' %> -->
+        <% end %>
+    </p>
+<% end %>
+
