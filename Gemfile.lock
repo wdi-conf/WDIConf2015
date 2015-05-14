@@ -41,10 +41,6 @@ GEM
       rake (~> 10.4)
     arel (6.0.0)
     bcrypt (3.1.10)
-<<<<<<< HEAD
-    bcrypt (3.1.10-x86-mingw32)
-=======
->>>>>>> 2b5505a5e48d3da3f8a476bc9f9bd1c1674bcd61
     better_errors (2.1.1)
       coderay (>= 1.0.0)
       erubis (>= 2.6.6)
@@ -98,16 +94,7 @@ GEM
     nokogiri (1.6.6.2)
       mini_portile (~> 0.6.0)
     pg (0.18.1)
-<<<<<<< HEAD
-    pg (0.18.1-x86-mingw32)
     pry (0.10.1)
-      coderay (~> 1.1.0)
-      method_source (~> 0.8.1)
-      slop (~> 3.4)
-    pry (0.10.1-x86-mingw32)
-=======
-    pry (0.10.1)
->>>>>>> 2b5505a5e48d3da3f8a476bc9f9bd1c1674bcd61
       coderay (~> 1.1.0)
       method_source (~> 0.8.1)
       slop (~> 3.4)
@@ -149,6 +136,7 @@ GEM
       thor (>= 0.18.1, < 2.0)
     rake (10.4.2)
     rdoc (4.2.0)
+      json (~> 1.4)
     rspec-core (3.2.3)
       rspec-support (~> 3.2.0)
     rspec-expectations (3.2.1)
@@ -177,6 +165,7 @@ GEM
       json (~> 1.7, >= 1.7.7)
       rdoc (~> 4.0)
     slop (3.6.0)
+    spring (1.3.6)
     sprockets (3.1.0)
       rack (~> 1.0)
     sprockets-rails (2.3.1)
@@ -222,6 +211,7 @@ DEPENDENCIES
   rspec-rails
   sass-rails (~> 5.0)
   sdoc (~> 0.4.0)
+  spring
   turbolinks
   tzinfo-data
   uglifier (>= 1.3.0)
