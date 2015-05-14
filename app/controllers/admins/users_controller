@@ -22,7 +22,7 @@ class Admins::UsersController < AdminsController
   def update
     @user = User.find(params[:id])
     if @user.update(user_params)
-      redirect_to '/admin'
+      redirect_to '/admins/users'
     else
       render :edit
     end
@@ -35,7 +35,7 @@ class Admins::UsersController < AdminsController
   def destroy
     @user = User.find(params[:id])
     @user.destroy
-    redirect_to '/admin'
+    redirect_to '/admins/users'
   end
 
   def user_params

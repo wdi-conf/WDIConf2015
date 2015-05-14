@@ -21,7 +21,7 @@ class Admins::EventsController < AdminsController
   def update
     @event = Event.find(params[:id])
     if @event.update(event_params)
-      redirect_to '/admin'
+      redirect_to '/admins/events'
     else
       render :edit
     end
@@ -34,7 +34,7 @@ class Admins::EventsController < AdminsController
   def destroy
     @event = Event.find(params[:id])
     @event.destroy
-    redirect_to '/admin'
+    redirect_to '/admins/events'
   end
 
   def event_params

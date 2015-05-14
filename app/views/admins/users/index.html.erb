@@ -2,8 +2,8 @@
 
 <% @users.each do |user| %>
     <p>
-        <%= link_to user.name, user_path(user) %> <br>
-        <%= link_to 'edit', edit_user_path(user) %>
+        <%= link_to user.name, admins_user_path(user) %> <br>
+        <%= link_to 'edit', edit_admins_user_path(user) %>
 
         <!--refactored version of the above-->
         <%= form_for user, :method => :delete do |f| %>
