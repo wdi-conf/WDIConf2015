@@ -11,3 +11,10 @@
 /log/*
 !/log/.keep
 /tmp
+
+config/secrets.yml
+config/database.yml
+
+*.xml
+.idea/
+

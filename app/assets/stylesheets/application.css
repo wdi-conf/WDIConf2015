@@ -13,3 +13,75 @@
  *= require_tree .
  *= require_self
  */
+
+
+html, body{
+  height: 100%;
+  margin: 0;
+}
+
+nav{
+  position: fixed;
+  text-align: right;
+  height: 100%;
+  background: white;
+  left: 0;
+  width: 10%;
+  font-family: helvetica;
+  text-transform: uppercase;
+}
+nav ul{
+  padding: 0;
+}
+
+nav ul a li{
+  font-size: 1vw;
+  width: 100%;
+  margin-bottom: 50px;
+  height: 5vh;
+  line-height: 5vh;
+  padding-right: 1em;
+}
+
+nav ul a{
+  color: red;
+  font-family: raleway;
+  text-decoration: none;
+}
+
+nav ul a li:hover{
+  transition: 0.2s ease all;
+  background-color: #e74c3c;
+  color: white;
+}
+
+
+.default{
+  transition: 0.3s ease all;
+  margin-left: -7%;
+}
+
+.nav-expand{
+  transform: translateX(0%);
+  transition: 0.3s ease all;
+}
+
+
+nav ul{
+  list-style-type: none;
+}
+
+.home-page{
+  height: 100%;
+  width: 100%;
+  background: url(background-home.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.home-page img{
+  display: block;
+  margin: auto;
+}
