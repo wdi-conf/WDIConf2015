@@ -1,10 +1,7 @@
-<h1>Schedule</h1>
+<h1><%= @event.title %></h1>
 
-<div>
-  <h3>Dom's talk on absolutely nothing</h3>
-  <h5>2:00 til Awesome</h5>
-  <p>This talk is to do with absolutely nothing.</p>
-  <p>It's something you'll really want to miss</p>
-  <img src="http://reactiongifs.me/wp-content/uploads/2013/08/shia-labeouf-magic-gif.gif" alt=""><br>
-  <button>Book Me</button>
-</div>
+<h3><%= @event.speaker.name %></h3>
+
+<p><%= @event.description %></p>
+
+<button><%= link_to 'Book Now!', '#' %></button>
