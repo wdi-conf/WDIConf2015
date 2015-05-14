@@ -22,7 +22,7 @@ gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
 
 # Use ActiveModel has_secure_password
-# gem 'bcrypt', '~> 3.1.7'
+gem 'bcrypt', '~> 3.1.7'
 
 # Use Unicorn as the app server
 # gem 'unicorn'
@@ -31,6 +31,10 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 # gem 'capistrano-rails', group: :development
 
 group :development, :test do
+  # Required by Windows devs
+  # allows time zone data to be accessed on windows
+  gem 'tzinfo-data'
+
   # Use postgresql as the database for Active Record
   gem 'pg'
 
@@ -43,9 +47,7 @@ group :development, :test do
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
 
-  # Call 'byebug' anywhere in the code to stop execution and get a debugger console
-  gem 'byebug'
-  # added by JLW below
+  # developement gems recommended by Matt Swan
   gem 'pry-rails'
   gem 'better_errors'
   gem 'meta_request'
@@ -57,6 +59,7 @@ end
 
 group :production do
   gem 'pg'
+  # gem below required for Heroku deployment
   gem 'rails_12factor'
 end
 
