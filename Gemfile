@@ -24,6 +24,9 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 # Use ActiveModel has_secure_password
 gem 'bcrypt', '~> 3.1.7'
 
+# Use postgresql as the database for Active Record
+gem 'pg'
+
 # Use Unicorn as the app server
 # gem 'unicorn'
 
@@ -34,9 +37,6 @@ group :development, :test do
   # Required by Windows devs
   # allows time zone data to be accessed on windows
   gem 'tzinfo-data'
-
-  # Use postgresql as the database for Active Record
-  gem 'pg'
 
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
@@ -58,7 +58,6 @@ group :development, :test do
 end
 
 group :production do
-  gem 'pg'
   # gem below required for Heroku deployment
   gem 'rails_12factor'
 end
