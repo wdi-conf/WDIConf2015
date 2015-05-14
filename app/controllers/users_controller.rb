@@ -5,16 +5,18 @@ class UsersController < ApplicationController
 	end
 
 	def create
+		@event = params[:user][:event_id]
+
 		# create a new user
 		@user = User.new( name: params[:user][:name], email: params[:user][:email], password: params[:user][:password], role: :user)
 
 		if @user.save
 				# Assign this user to the talk they wanted
-				new_attendee = Attendee.new(user_id: @user.id, event_id: params[:user][:event_id])
+				new_attendee = Attendee.new(user_id: @user.id, event_id: @event.id)
 				if new_attendee.save
         	redirect_to root_path
       	else
-      		redirect_to :back
+      		redirect_to :back, alert: "Something went wrong! Please try again."
       	end
       else
         render :new
