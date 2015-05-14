@@ -1,4 +1,5 @@
 class User < ActiveRecord::Base
-
-  has_many :events, :through => :attendees
+	has_secure_password
+	has_many :attendees
+	has_many :events, through: :attendees
 end

@@ -1,4 +1,13 @@
-<h1>WDI CONF DOS</h1>
+<h1>WDIconf</h1>
 
+<h2>Events</h2>
 
-
+<% @events.each do |event| %>
+	<h3><%= event.title %></h3>
+	<p><%= event.description %></p>
+	<h4><%= event.speaker.name %> - </h4>
+	<h5><%= event.speaker.bio %></h5>
+	<p><strong><%= event.date_time %></strong></p>
+	<p></p>
+	<button><%= link_to 'Book Now!', event_path(event.id) %></button>
+<% end %>
