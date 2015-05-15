@@ -22,8 +22,6 @@
 	proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 	<div class="buttons cf">
 		<button class="back"><%= link_to 'Back', events_path %></button>
-		<button class="next"><%= link_to 'Book Now!', new_user_path %></button>
+		<button class="next"><%= link_to 'Book Now!', new_user_path(event_id: @event.id) %></button>
 	</div>
 </div>
-
-
