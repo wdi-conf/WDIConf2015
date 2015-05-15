@@ -1,6 +1,6 @@
 class Admins::UsersController < AdminsController
   # JLW temporary in development so I can see results
-  layout false
+  # layout false
 
   def create
     @user = User.new(user_params)

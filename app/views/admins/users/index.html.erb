@@ -1,14 +1,11 @@
-<h2>Users</h2>
+<h2>Users 123</h2>
 
 <% @users.each do |user| %>
     <p>
         <%= link_to user.name, admins_user_path(user) %> <br>
         <%= link_to 'edit', edit_admins_user_path(user) %>
 
-        <!--refactored version of the above-->
-        <%= form_for user, :method => :delete do |f| %>
-            <button>delete</button> <!--<%#= f.submit 'delete' %> -->
-        <% end %>
+        <%= link_to 'Destroy', '/', method: :delete %>
     </p>
 <% end %>
 
