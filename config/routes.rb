@@ -15,5 +15,9 @@ Rails.application.routes.draw do
   #/session - logout
     delete '/logout' => 'session#destroy'
 
+  # namespaces the admin to /admin/* paths
+  namespace :admins do
+    resources :events, :users
+  end
 
 end
