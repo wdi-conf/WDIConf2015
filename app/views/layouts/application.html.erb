@@ -11,6 +11,7 @@
 
 
 <body>
+<<<<<<< HEAD
     <nav class="default span-1" id="navbar">
         <%=image_tag('menuicon.png')%>
       <ul>
@@ -32,6 +33,39 @@
     <div class="container">
       <%= yield %>
     </div>
+=======
+<!-- start of login -->
+ <% if logged_in? %> 
+  Logged in as <%= current_user.name %>
+   <%= form_tag '/logout', :method => :delete do %> 
+    <button>Logout</button>
+   <% end %> 
+  <% else %>
+    <%= link_to('Login', login_path) %>
+ <% end %> 
+
+<% if logged_in? && current_user.role == "speaker" %>
+  <a href="#">View Profile</a>
+<% end %> 
+<!-- end of login  -->
+
+  <nav class="default span-1" id="navbar">
+      <%=image_tag('menuicon.png')%>
+    <ul>
+      <a href="#"><li>Home</li></a>
+      <a href="#"><li>Speakers</li></a>
+      <a href="#"><li>About</li></a>
+      <a href="#"><li>Schedule</li></a>
+      <a href="#"><li>Contact</li></a>
+      <a href="#"><li>Sponsors</li></a>
+      <a href="#"><li>The Team</li></a>
+    </ul>
+  </nav>
+
+
+  <div class="home-page">
+    <%= image_tag('logowhite.svg', :class=> "home-logo")%>
+>>>>>>> 8070870bf7e554808c0fe4e18d11e95ccab40e58
   </div>
 </div>
 
