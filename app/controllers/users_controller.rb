@@ -11,6 +11,10 @@ class UsersController < ApplicationController
 		@user = User.new( name: params[:user][:name], email: params[:user][:email], password: params[:user][:password], role: :user)
 
 		if @user.save
+
+				# Log the user in
+				session[:user_id] = @user.id
+
 				# Assign this user to the talk they wanted
 				new_attendee = Attendee.new(user_id: @user.id, event_id: @event.id)
 				if new_attendee.save

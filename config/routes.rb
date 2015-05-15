@@ -18,5 +18,9 @@ Rails.application.routes.draw do
   # add a logged in user to an event
   	post 'events/:id/join' => 'users#join_event'
 
+  # namespaces the admin to /admin/* paths
+  namespace :admins do
+    resources :events, :users
+  end
 
 end
