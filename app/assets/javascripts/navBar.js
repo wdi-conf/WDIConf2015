@@ -16,14 +16,14 @@ var bio = document.getElementsByClassName('bio');
       }
     });
 
-    // document.getElementsByClassName('speaker-listing').addEventListener('click', function(){
-      // $(newBox).effect('slide', { direction: 'right', mode: 'hide' }, 500);
-      for(i = 0; i<speaker.length; i++){
-        speaker[i].addEventListener('click', function(){
-          console.log('hi' + i);
-          // .show("fold", 1000 )
-        })
-    };
-
-
 });
+
+
+
+
+// FOR BOUNCING ARROW ON HOMEPAGE LOAD
+
+// window.setInterval(function bounceArrow(){
+// $( "#bounce-arrow" ).effect( "bounce", { times: 3 }, "slow" );
+// }, 5000);
+
