@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
 
-  resources :events, :pages
+  resources :events, :pages, :users
 
   get '/' => 'events#index', :as => :root
 
