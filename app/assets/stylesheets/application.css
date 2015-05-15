@@ -29,19 +29,20 @@ nav{
   height: 100%;
   background: white;
   left: 0;
-  width: 10%;
+  width: 150px;
   text-transform: uppercase;
+  overflow: hidden;
 }
 nav ul{
   padding: 0;
 }
 
 nav ul a li{
-  font-size: 1vw;
+  font-size: 14px;
   width: 100%;
   margin-bottom: 50px;
-  height: 5vh;
-  line-height: 5vh;
+  height: 4vh;
+  line-height: 4vh;
   padding-right: 1em;
 }
 
@@ -60,7 +61,7 @@ nav ul a li:hover{
 
 .default{
   transition: 0.3s ease all;
-  margin-left: -7%;
+  margin-left: -100px;
 }
 
 .nav-expand{
@@ -73,21 +74,28 @@ nav ul{
   list-style-type: none;
 }
 
-/*END OF NAV*/
-
-.container{
-  width: 80%;
-  display: block;
-  margin: auto;
+.logged-in{
+  width: 100%;
   text-align: center;
-  padding-top: 5%;
-  height: 100%;
 }
 
-.page-title{
-  font-size: 56px;
-  font-weight: 500;
-}
+<div class="home-page hor-allign red">
+  <div class="center-wrapper">
+    <%= image_tag('logowhite.png', :class=> "home-logo span-6")%>
+    <p class="span-6 off-4">
+      WDI Conf returns for a second year this May. After a successful inaugural conference, WDI Conf will again present talks by established and emerging tech experts. Located in the heart of the city, the conference aims to showcase why Melbourne is considered at the forefront of the tech movement.
+    </p>
+  </div>
+</div>
+
+
+<div class="speakers-page hor-allign off-white">
+  <div class="center-wrapper">
+    <span class="title">Speakers</span>
+  </div>
+</div>
+
+
 
 /*PAGE COLOURS*/
 .red{
@@ -107,50 +115,12 @@ nav ul{
 }
 /*END OF COLOUR*/
 
-.canvas{
-  width: 100%;
-  height: 100%;
-  display: block;
-  margin: auto;
 
-}
+.hor-allign{
 
-.shade img{
-  position: fixed;
-  right: 0;
-  bottom: 0;
-  max-width: 100%;
-  height: 100%;
-  opacity: 0.5;
-  -moz-user-select: none; 
-  -webkit-user-select: none;
-  -ms-user-select: none;
-  user-select: none; 
-  -webkit-user-drag: none;
-  user-drag: none;
-}
-
-
-
-
-/*---END OF LAYOUT STYLES---*/
-
-
-/*---SUPER SPECIAL HOME PAGE STYLEZZZ---*/
-.home-page{
-  height: 100%;
-  width: 100%;
-  margin-top: -5%;
-/*  background: url(background-home.jpg) no-repeat center center fixed; 
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-*/
   display: -ms-flexbox;
   display: -webkit-flex;
   display: flex;
-
   -ms-flex-align: center;
   -webkit-align-items: center;
   -webkit-box-align: center;
@@ -158,21 +128,80 @@ nav ul{
   align-items: center;
 }
 
-.home-page img{
+/*---END OF LAYOUT STYLES---*/
+
+
+/*---SUPER SPECIAL HOME PAGE STYLEZZZ---*/
+.red-page{
+  width: 100%;
+  min-height: 100%;
+  background-color: #e74c3c;
+}
+
+.white-page{
+  width: 100%;
+  min-height: 100%;
+  background-color: #ebebeb;
+}
+
+.default-container{
+  width: 70%;
+  margin: auto;
+}
+
+.home img{
   display: block;
   margin: auto;
 }
 
-.home-page p{
+.home p{
   display: block;
-  font-family: raleway;
   color: white;
   text-align: center;
   font-size: 18px;
 }
 
-.home-container{
 
+
+/*---SPEAKERS PAGE---*/
+.speaker-listing{
+  width: 20%;
+  margin: 2% 2% 2% 2%;
+  background-color: white;
+  display: inline-block;
+  text-overflow: ellipsis;
+
+}
+
+.speaker-listing img{
+  width: 100%;
+  /*border-radius: 100%;*/
+}
+
+.speaker-listing .name{
+  display: block;
+  text-align: center;
+  padding: 5px 0 5px 0;
+  width: 100%;
+  font-size: 1vw;
+  text-transform: uppercase;
+  text-decoration: bold;
+  line-height: 1vw;
+  white-space: nowrap;
+}
+
+.speaker-listing .bio{
+  height: 100px;
+  width: 14%;
+  margin: 0;
+  background-color: white;
+  position: absolute;
+}
+
+.hidden-bio{
+  top: 0;
+  transform: translateY(100px);
+  transition: 1s ease all;
 }
 
 

@@ -1,4 +1,5 @@
 document.addEventListener("DOMContentLoaded", function() {
+var speaker = document.getElementById('speaker')
 
   document.getElementById('navbar').addEventListener('mouseover', function(){
       if (this.classList.contains('default')){
@@ -13,4 +14,10 @@ document.addEventListener("DOMContentLoaded", function() {
         this.classList.add('default');
       }
     });
+
+    // document.getElementsByClassName('speaker-listing').addEventListener('mouseover', function(){
+
+    // });
+
+
 });
