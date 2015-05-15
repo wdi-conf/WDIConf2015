@@ -5,7 +5,7 @@ class UsersController < ApplicationController
 	end
 
 	def create
-		@event = params[:user][:event_id]
+		@event = Event.find(params[:user][:event_id])
 
 		# create a new user
 		@user = User.new( name: params[:user][:name], email: params[:user][:email], password: params[:user][:password], role: :user)
@@ -14,7 +14,7 @@ class UsersController < ApplicationController
 				# Assign this user to the talk they wanted
 				new_attendee = Attendee.new(user_id: @user.id, event_id: @event.id)
 				if new_attendee.save
-        	redirect_to root_path
+        	redirect_to root_path, notice: "Woohoo! Your ticket has been booked!"
       	else
       		redirect_to :back, alert: "Something went wrong! Please try again."
       	end
