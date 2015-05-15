@@ -1,0 +1,12 @@
+<h2>Events</h2>
+
+<% @events.each do |event| %>
+    <p>
+        <%= link_to event.title, admins_event_path(event) %> <br>
+        <%= link_to 'edit', edit_admins_event_path(event) %>
+
+        <%= link_to 'Destroy', admins_event_path(event), method: :delete %>
+    </p>
+<% end %>
+
+
