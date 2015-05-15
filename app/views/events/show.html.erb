@@ -4,4 +4,4 @@
 
 <p><%= @event.description %></p>
 
-<button><%= link_to 'Book Now!', '#' %></button>
+<button><%= link_to 'Book Now!', new_user_path(event_id: @event.id) %></button>
