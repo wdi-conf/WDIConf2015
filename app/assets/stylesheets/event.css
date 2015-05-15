@@ -1,0 +1,47 @@
+/*.event {
+	margin: 0 30px 50px;
+}
+*/
+.speaker {
+	float: right;
+	text-align: center;
+	width: 35%;
+	margin-left: 10px;
+}
+
+.speaker img {
+	border-radius: 50%;
+}
+
+.speaker p {
+	font-style: italic;
+}
+
+.next {
+	float: right;
+}
+
+
+/* Apply a natural box layout model to all elements, but allowing components to change */
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+
+/*----------------------------------*/
+/* Clearfix for floats              */
+/*----------------------------------*/
+.cf:before,
+.cf:after {
+   content:"";
+   display:table;
+}
+.cf:after {
+   clear:both;
+}
+.cf {
+   zoom:1; /* For IE 6/7 (trigger hasLayout) */
+}
