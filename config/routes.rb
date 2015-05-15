@@ -6,4 +6,14 @@ Rails.application.routes.draw do
 
   get '/about' => 'pages#about'
 
+  #/session/new - login form
+  get '/login' => 'session#new'
+
+  #/session - after submit form for login
+    post '/login' => 'session#create'
+
+  #/session - logout
+    delete '/logout' => 'session#destroy'
+
+
 end
