@@ -11,22 +11,9 @@
 
 <body>
 
-<!-- start of login -->
- <% if logged_in? %> 
-  Logged in as <%= current_user.name %>
-   <%= form_tag '/logout', :method => :delete do %> 
-    <button>Logout</button>
-   <% end %> 
-  <% else %>
-    <%= link_to('Login', login_path) %>
- <% end %> 
 
-<% if logged_in? && current_user.role == "speaker" %>
-  <a href="#">View Profile</a>
-<% end %> 
-<!-- end of login  -->
 
-  <nav class="default span-1" id="navbar">
+  <nav class="default" id="navbar">
       <%=image_tag('menuicon.png')%>
     <ul>
       <a href="/"><li>Home</li></a>
@@ -38,19 +25,24 @@
       <a href="#"><li>The Team</li></a>
       <a href="/events"><li>Events</li></a>
     </ul>
+
+    <!-- start of login -->
+    <div class="logged-in">
+     <% if logged_in? %> 
+      <a href="#"><%= current_user.name %></a>
+       <%= form_tag '/logout', :method => :delete do %> 
+        <button>Logout</button>
+       <% end %> 
+      <% else %>
+        <%= link_to('Login', login_path) %>
+      <% end %> 
+
+      <% if logged_in? && current_user.role == "speaker" %>
+        <!-- <a href="#">View Profile</a> -->
+      <% end %> 
+    </div> 
+    <!-- end of login  -->
   </nav>
-
-
-<div class="canvas">
-  <div id="background-color" class="red">
-
-    <div class="container">
-      <%= yield %>
-    </div>
-</div>
-
-
-
-
+<%= yield %>
 </body>
 </html>
