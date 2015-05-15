@@ -8,7 +8,6 @@ class Admins::UsersController < AdminsController
 
   def new
     @user = User.new
-
   end
 
   def index
