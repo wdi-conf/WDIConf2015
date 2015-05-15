@@ -15,5 +15,8 @@ Rails.application.routes.draw do
   #/session - logout
     delete '/logout' => 'session#destroy'
 
+  # add a logged in user to an event
+  	post 'events/:id/join' => 'users#join_event'
+
 
 end
