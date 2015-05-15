@@ -38,7 +38,6 @@ nav ul{
 }
 
 nav ul a li{
-  font-size: 14px;
   width: 100%;
   margin-bottom: 50px;
   height: 4vh;
@@ -47,7 +46,8 @@ nav ul a li{
 }
 
 nav ul a{
-  color: red;
+  font-size: 14px;
+  color: #e74c3c;
   font-family: raleway;
   text-decoration: none;
 }
@@ -56,6 +56,16 @@ nav ul a li:hover{
   transition: 0.2s ease all;
   background-color: #e74c3c;
   color: white;
+}
+
+nav .fa{
+  font-size: 24px;
+  padding-left: 15px;
+}
+
+nav .fa-bars{
+  /*color: #e74c3c;*/
+  font-size: 30px;
 }
 
 
@@ -79,33 +89,6 @@ nav ul{
   text-align: center;
 }
 
-<div class="home-page hor-allign red">
-  <div class="center-wrapper">
-    <%= image_tag('logowhite.png', :class=> "home-logo span-6")%>
-    <p class="span-6 off-4">
-      WDI Conf returns for a second year this May. After a successful inaugural conference, WDI Conf will again present talks by established and emerging tech experts. Located in the heart of the city, the conference aims to showcase why Melbourne is considered at the forefront of the tech movement.
-    </p>
-  </div>
-</div>
-
-
-<div class="speakers-page hor-allign off-white">
-  <div class="center-wrapper">
-    <span class="title">Speakers</span>
-  </div>
-</div>
-
-
-
-/*PAGE COLOURS*/
-.red{
-  background-color: #e74c3c;
-  height: 100%;
-  width: 100%;
-  margin-top: 0;
-  transition: 1s;
-}
-
 .off-white{
   background-color: #ebebeb;
   height: 100%;
@@ -113,7 +96,6 @@ nav ul{
   margin-top: 0;
   transition: 1s;
 }
-/*END OF COLOUR*/
 
 
 .hor-allign{
@@ -128,6 +110,8 @@ nav ul{
   align-items: center;
 }
 
+
+
 /*---END OF LAYOUT STYLES---*/
 
 
@@ -135,7 +119,8 @@ nav ul{
 .red-page{
   width: 100%;
   min-height: 100%;
-  background-color: #e74c3c;
+  background: linear-gradient(135deg, #e74c3c 50%, #e56054 50%);
+  /*background: #e74c3c;*/
 }
 
 .white-page{
@@ -161,13 +146,28 @@ nav ul{
   font-size: 18px;
 }
 
+#bounce-arrow {
+  text-align: center;
+  color: white;
+  font-size: 50px;
+}
+
+#bounce-arrow a{
+  outline: none;
+  color: white;
+}
+
+#bounce-arrow a:visited, #bounce-arrow a:focus{
+  display: none;
+}
+
 
 
 /*---SPEAKERS PAGE---*/
 .speaker-listing{
   width: 20%;
   margin: 2% 2% 2% 2%;
-  background-color: white;
+  background-color: #e74c3c;
   display: inline-block;
   text-overflow: ellipsis;
 
@@ -188,13 +188,17 @@ nav ul{
   text-decoration: bold;
   line-height: 1vw;
   white-space: nowrap;
+  background-color: #e74c3c;
+  color: white;
 }
 
 .speaker-listing .bio{
-  height: 100px;
+  height: 200px;
   width: 14%;
+  margin: 0;
   background-color: white;
   display: none;
+  position: absolute;
 }
 
 
