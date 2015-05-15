@@ -17,7 +17,10 @@
 
 html, body{
   height: 100%;
+  width: 100%;
   margin: 0;
+  font-family: raleway;
+
 }
 
 nav{
@@ -27,7 +30,6 @@ nav{
   background: white;
   left: 0;
   width: 10%;
-  font-family: helvetica;
   text-transform: uppercase;
 }
 nav ul{
@@ -71,17 +73,100 @@ nav ul{
   list-style-type: none;
 }
 
+/*END OF NAV*/
+
+.container{
+  width: 80%;
+  display: block;
+  margin: auto;
+  text-align: center;
+  padding-top: 5%;
+  height: 100%;
+}
+
+.page-title{
+  font-size: 56px;
+  font-weight: 500;
+}
+
+/*PAGE COLOURS*/
+.red{
+  background-color: #e74c3c;
+  height: 100%;
+  width: 100%;
+  margin-top: 0;
+  transition: 1s;
+}
+
+.off-white{
+  background-color: #ebebeb;
+  height: 100%;
+  width: 100%;
+  margin-top: 0;
+  transition: 1s;
+}
+/*END OF COLOUR*/
+
+.canvas{
+  width: 100%;
+  height: 100%;
+  display: block;
+  margin: auto;
+
+}
+
+.shade img{
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  max-width: 100%;
+  height: 100%;
+}
+
+
+
+
+/*---END OF LAYOUT STYLES---*/
+
+
+/*---SUPER SPECIAL HOME PAGE STYLEZZZ---*/
 .home-page{
   height: 100%;
   width: 100%;
-  background: url(background-home.jpg) no-repeat center center fixed; 
+  margin-top: -5%;
+/*  background: url(background-home.jpg) no-repeat center center fixed; 
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+*/
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+
+  align-items: center;
 }
 
 .home-page img{
   display: block;
   margin: auto;
 }
+
+.home-page p{
+  display: block;
+  font-family: raleway;
+  color: white;
+  text-align: center;
+  font-size: 18px;
+}
+
+.home-container{
+
+}
+
+
+
