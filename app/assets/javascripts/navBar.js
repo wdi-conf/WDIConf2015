@@ -1,5 +1,6 @@
 document.addEventListener("DOMContentLoaded", function() {
-var speaker = document.getElementById('speaker')
+var speaker = document.getElementsByClassName('speaker-listing');
+var bio = document.getElementsByClassName('bio');
 
   document.getElementById('navbar').addEventListener('mouseover', function(){
       if (this.classList.contains('default')){
@@ -15,9 +16,14 @@ var speaker = document.getElementById('speaker')
       }
     });
 
-    // document.getElementsByClassName('speaker-listing').addEventListener('mouseover', function(){
-
-    // });
+    // document.getElementsByClassName('speaker-listing').addEventListener('click', function(){
+      // $(newBox).effect('slide', { direction: 'right', mode: 'hide' }, 500);
+      for(i = 0; i<speaker.length; i++){
+        speaker[i].addEventListener('click', function(){
+          console.log('hi' + i);
+          // .show("fold", 1000 )
+        })
+    };
 
 
 });

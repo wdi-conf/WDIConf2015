@@ -193,15 +193,8 @@ nav ul{
 .speaker-listing .bio{
   height: 100px;
   width: 14%;
-  margin: 0;
   background-color: white;
-  position: absolute;
-}
-
-.hidden-bio{
-  top: 0;
-  transform: translateY(100px);
-  transition: 1s ease all;
+  display: none;
 }
 
 
