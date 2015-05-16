@@ -17,121 +17,14 @@
       <h2>Speakers</h2>
     </span>
 
-    <div data-sr class="speaker-listing" id="speaker">
-      <%= image_tag('placeholder.gif')%>
-      <span class="name"><b>Matt Cameron</b></span>
-      <p class="bio">
-      </p>
-    </div>
-
-     <div data-sr class="speaker-listing" id="speaker">
-      <%= image_tag('placeholder.gif')%>
-      <span class="name"><b>Dom White</b></span>
-      <p class="bio">
-      </p>
-    </div>
-
-    <div data-sr class="speaker-listing" id="speaker">
-      <%= image_tag('placeholder.gif')%>
-      <span class="name"><b>Nike Pateman</b></span>
-      <p class="bio">
-      </p>
-    </div>
-
+    <% @speakers.each do |speaker| %>
       <div data-sr class="speaker-listing" id="speaker">
-      <%= image_tag('placeholder.gif')%>
-      <span class="name"><b>Aden Margheriti</b></span>
-      <p class="bio">
-      </p>
-    </div>
-
-     <div data-sr class="speaker-listing" id="speaker">
-      <%= image_tag('placeholder.gif')%>
-      <span class="name"><b>Beta Sucks</b></span>
-      <p class="bio">
-      </p>
-    </div>
-
-      <div data-sr class="speaker-listing" id="speaker">
-      <%= image_tag('placeholder.gif')%>
-      <span class="name"><b>Luke Shillabeer</b></span>
-      <p class="bio">
-      </p>
-    </div>
-
-    <div data-sr class="speaker-listing" id="speaker">
-      <%= image_tag('placeholder.gif')%>
-      <span class="name"><b>Matt Swann</b></span>
-      <p class="bio">
-      </p>
-    </div>
-
-    <div data-sr class="speaker-listing" id="speaker">
-      <%= image_tag('placeholder.gif')%>
-      <span class="name"><b>Daniel Tsui</b></span>
-      <p class="bio">
-      </p>
-    </div>
-
-    <div data-sr class="speaker-listing" id="speaker">
-      <%= image_tag('placeholder.gif')%>
-      <span class="name"><b>JC Lee</b></span>
-      <p class="bio">
-      </p>
-    </div>
-
-     <div data-sr class="speaker-listing" id="speaker">
-      <%= image_tag('placeholder.gif')%>
-      <span class="name"><b>Louis Moore</b></span>
-      <p class="bio">
-      </p>
-    </div>
-
-    <div data-sr class="speaker-listing" id="speaker">
-      <%= image_tag('placeholder.gif')%>
-      <span class="name"><b>Phil Costanza</b></span>
-      <p class="bio">
-      </p>
-    </div>
-
-      <div data-sr class="speaker-listing" id="speaker">
-      <%= image_tag('placeholder.gif')%>
-      <span class="name"><b>Jaya Winojo</b></span>
-      <p class="bio">
-      </p>
-    </div>
-
-     <div data-sr class="speaker-listing" id="speaker">
-      <%= image_tag('placeholder.gif')%>
-      <span class="name"><b>Justin Ward</b></span>
-      <p class="bio">
-      </p>
-    </div>
-
-      <div data-sr class="speaker-listing" id="speaker">
-      <%= image_tag('placeholder.gif')%>
-      <span class="name"><b>Jeff Wolff</b></span>
-      <p class="bio">
-      </p>
-    </div>
-
-    <div data-sr class="speaker-listing" id="speaker">
-      <%= image_tag('placeholder.gif')%>
-      <span class="name"><b>Jared O'Loughlin</b></span>
-      <p class="bio">
-      </p>
-    </div>
-
-    <div data-sr class="speaker-listing" id="speaker">
-      <%= image_tag('placeholder.gif')%>
-      <span class="name"><b>Mike Goodwin</b></span>
-      <p class="bio">
-      </p>
-    </div>
-
-
-
-
+        <%= image_tag('placeholder.gif')%>
+        <span class="name"><b><%= speaker.name %></b></span>
+        <p class="bio">
+        </p>
+      </div>
+    <% end %>
 
   </div>
 </div>
