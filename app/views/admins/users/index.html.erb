@@ -1,11 +1,15 @@
-<h2>Users 123</h2>
+<h2>Users</h2>
+<table class="admin" border="1">
+  <tr><th>Name</th><th>Role</th><th>Edit</th><th>Delete</th></tr>
+    <% @users.each do |user| %>
+        <tr>
+            <td class="admin-left"><%= link_to user.name, admins_user_path(user) %></td>
+            <td><%= user.role %></td>
+            <td><%= link_to 'edit', edit_admins_user_path(user) %></td>
 
-<% @users.each do |user| %>
-    <p>
-        <%= link_to user.name, admins_user_path(user) %> <br>
-        <%= link_to 'edit', edit_admins_user_path(user) %>
+            <td><%= link_to 'Destroy', admins_user_path(user), method: :delete %></td>
+        </tr>
+    <% end %>
+</table>
 
-        <%= link_to 'Destroy', admins_user_path(user), method: :delete %>
-    </p>
-<% end %>
-
+<%= render :partial => 'admins/pages/admin' %>

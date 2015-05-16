@@ -1,6 +1,4 @@
 class Admins::EventsController < AdminsController
-  # JLW temporary in development so I can see results
-  # layout false
 
   def create
     @event = Event.new(event_params)
