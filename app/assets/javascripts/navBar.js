@@ -1,4 +1,6 @@
 document.addEventListener("DOMContentLoaded", function() {
+var speaker = document.getElementsByClassName('speaker-listing');
+var bio = document.getElementsByClassName('bio');
 
   document.getElementById('navbar').addEventListener('mouseover', function(){
       if (this.classList.contains('default')){
@@ -13,4 +15,15 @@ document.addEventListener("DOMContentLoaded", function() {
         this.classList.add('default');
       }
     });
+
 });
+
+
+
+
+// FOR BOUNCING ARROW ON HOMEPAGE LOAD
+
+// window.setInterval(function bounceArrow(){
+// $( "#bounce-arrow" ).effect( "bounce", { times: 3 }, "slow" );
+// }, 5000);
+
