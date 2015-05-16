@@ -71,3 +71,6 @@ input.textbox-300 {
 .admin tr:hover {
     background-color: #ffffff;
 }
+div .admin-nav-footer {
+    margin: 0 auto;
+}
