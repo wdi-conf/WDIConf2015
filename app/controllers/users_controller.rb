@@ -4,6 +4,10 @@ class UsersController < ApplicationController
 		@user = User.new
 	end
 
+	def show
+		@events = current_user.events
+	end
+
 	def create
 		@event = Event.find(params[:user][:event_id])
 
