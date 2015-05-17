@@ -1,15 +1,20 @@
  <%= form_for [:admins, @user] do |f| %> <!--need :admins since namespaced-->
-    <%= f.label :name %>
-    <%= f.text_field :name %>
+     <div class="admin">
+        <fieldset>
+            <legend>User</legend>
+            <p><%= f.label :name, :class =>'field' %></p>
+            <p><%= f.text_field :name, :class =>'textbox-300' %></p>
 
-    <%= f.label :email %>
-    <%= f.text_field :email %>
+            <p><%= f.label :email, :class =>'field' %></p>
+            <p><%= f.text_field :email, :class =>'textbox-300'  %></p>
 
-     <%= f.label :role %>
-     <%= f.text_field :role %>
+             <p><%= f.label :role, :class =>'field' %></p>
+             <p><%= f.text_field :role, :class =>'textbox-300'  %></p>
 
-     <%= f.label :bio %>
-     <%= f.text_field :bio %>
+             <p><%= f.label :bio, :class =>'field' %></p>
+             <p><%= f.text_field :bio, :class =>'textbox-300'  %></p>
 
-    <%= f.submit %>
+             <p><%= f.submit :class =>'btn'%></p>
+         </fieldset>
+     </div>
  <% end %>

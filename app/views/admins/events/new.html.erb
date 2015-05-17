@@ -1,7 +1,9 @@
 <h2>new event</h2>
 
-<%= form_for @event do |f| %>
+<%= form_for [:admins, @event] do |f| %>
 
     <%= render 'form' %>
 
 <% end %>
+
+<%= render :partial => 'admins/pages/admin' %>
