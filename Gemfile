@@ -15,7 +15,6 @@ gem 'coffee-rails', '~> 4.1.0'
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
-gem 'turbolinks'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.0'
 # bundle exec rake doc:rails generates the API under doc/api.
@@ -23,6 +22,9 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 
 # Use ActiveModel has_secure_password
 gem 'bcrypt', '~> 3.1.7'
+
+# Use postgresql as the database for Active Record
+gem 'pg'
 
 # Use Unicorn as the app server
 # gem 'unicorn'
@@ -35,9 +37,6 @@ group :development, :test do
   # allows time zone data to be accessed on windows
   gem 'tzinfo-data'
 
-  # Use postgresql as the database for Active Record
-  gem 'pg'
-
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
 
@@ -47,7 +46,7 @@ group :development, :test do
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
 
-  # developement gems recommended by Matt Swan
+  # development gems recommended by Matt Swan
   gem 'pry-rails'
   gem 'better_errors'
   gem 'meta_request'
@@ -58,7 +57,6 @@ group :development, :test do
 end
 
 group :production do
-  gem 'pg'
   # gem below required for Heroku deployment
   gem 'rails_12factor'
 end

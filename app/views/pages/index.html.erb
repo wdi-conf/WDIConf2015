@@ -1,8 +1,30 @@
-  <div class="home-page" id="home">
-    <div class="home-container">
+<div class="home red-page hor-allign" id="home">
+  <div class="default-container">
+    <div data-sr class="hor-wrapper">
     <%= image_tag('logowhite.png', :class=> "home-logo span-6")%>
-    <p class="span-6 off-4">
+    <p>
       WDI Conf returns for a second year this May. After a successful inaugural conference, WDI Conf will again present talks by established and emerging tech experts. Located in the heart of the city, the conference aims to showcase why Melbourne is considered at the forefront of the tech movement.
     </p>
+    <div id="bounce-arrow"><a data-scroll href="#speakers"><i class="fa fa-chevron-circle-down"></a></i></div>
+    </div>
+  </div>
+</div>
+
+<div class="speakers white-page hor-allign" id="speakers">
+  <div class="default-container">
+
+    <span class="title-speakers">
+      <h2>Speakers</h2>
+    </span>
+
+    <% @speakers.each do |speaker| %>
+      <div data-sr class="speaker-listing" id="speaker">
+        <%= image_tag('placeholder.gif')%>
+        <span class="name"><b><%= speaker.name %></b></span>
+        <p class="bio">
+        </p>
+      </div>
+    <% end %>
+
   </div>
 </div>

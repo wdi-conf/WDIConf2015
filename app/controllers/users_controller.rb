@@ -11,6 +11,10 @@ class UsersController < ApplicationController
 		@user = User.new( name: params[:user][:name], email: params[:user][:email], password: params[:user][:password], role: :user)
 
 		if @user.save
+
+				# Log the user in
+				session[:user_id] = @user.id
+
 				# Assign this user to the talk they wanted
 				new_attendee = Attendee.new(user_id: @user.id, event_id: @event.id)
 				if new_attendee.save
@@ -21,6 +25,18 @@ class UsersController < ApplicationController
       else
         render :new
       end
+	end
+
+	# joins a logged in user to an event without asking for their details again
+	def join_event
+		new_attendee = Attendee.new(user_id: current_user.id, event_id: params[:id])
+
+		if new_attendee.save
+        	redirect_to root_path, alert: "Woohoo! Your ticket has been booked!"
+      	else
+      		render :show, alert: "Something went wrong! Please try again."
+      	end
+
 	end
 
 end

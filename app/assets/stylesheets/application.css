@@ -29,24 +29,25 @@ nav{
   height: 100%;
   background: white;
   left: 0;
-  width: 10%;
+  width: 150px;
   text-transform: uppercase;
+  overflow: hidden;
 }
 nav ul{
   padding: 0;
 }
 
 nav ul a li{
-  font-size: 1vw;
   width: 100%;
   margin-bottom: 50px;
-  height: 5vh;
-  line-height: 5vh;
+  height: 4vh;
+  line-height: 4vh;
   padding-right: 1em;
 }
 
 nav ul a{
-  color: red;
+  font-size: 14px;
+  color: #e74c3c;
   font-family: raleway;
   text-decoration: none;
 }
@@ -57,10 +58,20 @@ nav ul a li:hover{
   color: white;
 }
 
+nav .fa{
+  font-size: 24px;
+  padding-left: 15px;
+}
+
+nav .fa-bars{
+  /*color: #e74c3c;*/
+  font-size: 30px;
+}
+
 
 .default{
   transition: 0.3s ease all;
-  margin-left: -7%;
+  margin-left: -100px;
 }
 
 .nav-expand{
@@ -73,29 +84,9 @@ nav ul{
   list-style-type: none;
 }
 
-/*END OF NAV*/
-
-.container{
-  width: 80%;
-  display: block;
-  margin: auto;
-  text-align: center;
-  padding-top: 5%;
-  height: 100%;
-}
-
-.page-title{
-  font-size: 56px;
-  font-weight: 500;
-}
-
-/*PAGE COLOURS*/
-.red{
-  background-color: #e74c3c;
-  height: 100%;
+.logged-in{
   width: 100%;
-  margin-top: 0;
-  transition: 1s;
+  text-align: center;
 }
 
 .off-white{
@@ -105,52 +96,13 @@ nav ul{
   margin-top: 0;
   transition: 1s;
 }
-/*END OF COLOUR*/
-
-.canvas{
-  width: 100%;
-  height: 100%;
-  display: block;
-  margin: auto;
-
-}
-
-.shade img{
-  position: fixed;
-  right: 0;
-  bottom: 0;
-  max-width: 100%;
-  height: 100%;
-  opacity: 0.5;
-  -moz-user-select: none; 
-  -webkit-user-select: none;
-  -ms-user-select: none;
-  user-select: none; 
-  -webkit-user-drag: none;
-  user-drag: none;
-}
 
 
+.hor-allign{
 
-
-/*---END OF LAYOUT STYLES---*/
-
-
-/*---SUPER SPECIAL HOME PAGE STYLEZZZ---*/
-.home-page{
-  height: 100%;
-  width: 100%;
-  margin-top: -5%;
-/*  background: url(background-home.jpg) no-repeat center center fixed; 
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-*/
   display: -ms-flexbox;
   display: -webkit-flex;
   display: flex;
-
   -ms-flex-align: center;
   -webkit-align-items: center;
   -webkit-box-align: center;
@@ -158,21 +110,95 @@ nav ul{
   align-items: center;
 }
 
-.home-page img{
+
+
+/*---END OF LAYOUT STYLES---*/
+
+
+/*---SUPER SPECIAL HOME PAGE STYLEZZZ---*/
+.red-page{
+  width: 100%;
+  min-height: 100%;
+  background: linear-gradient(135deg, #e74c3c 50%, #e56054 50%);
+  /*background: #e74c3c;*/
+}
+
+.white-page{
+  width: 100%;
+  min-height: 100%;
+  background-color: #ebebeb;
+}
+
+.default-container{
+  width: 70%;
+  margin: auto;
+}
+
+.home img{
   display: block;
   margin: auto;
 }
 
-.home-page p{
+.home p{
   display: block;
-  font-family: raleway;
   color: white;
   text-align: center;
   font-size: 18px;
 }
 
-.home-container{
+#bounce-arrow {
+  text-align: center;
+  color: white;
+  font-size: 50px;
+}
 
+#bounce-arrow a{
+  outline: none;
+  color: white;
+}
+
+#bounce-arrow a:visited, #bounce-arrow a:focus{
+  display: none;
+}
+
+
+
+/*---SPEAKERS PAGE---*/
+.speaker-listing{
+  width: 20%;
+  margin: 2% 2% 2% 2%;
+  background-color: #e74c3c;
+  display: inline-block;
+  text-overflow: ellipsis;
+
+}
+
+.speaker-listing img{
+  width: 100%;
+  /*border-radius: 100%;*/
+}
+
+.speaker-listing .name{
+  display: block;
+  text-align: center;
+  padding: 5px 0 5px 0;
+  width: 100%;
+  font-size: 1vw;
+  text-transform: uppercase;
+  text-decoration: bold;
+  line-height: 1vw;
+  white-space: nowrap;
+  background-color: #e74c3c;
+  color: white;
+}
+
+.speaker-listing .bio{
+  height: 200px;
+  width: 14%;
+  margin: 0;
+  background-color: white;
+  display: none;
+  position: absolute;
 }
 
 
