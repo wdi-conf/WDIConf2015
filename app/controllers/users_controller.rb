@@ -23,7 +23,7 @@ class UsersController < ApplicationController
 			session[:user_id] = @user.id
 
 			# Assign this user to the talk they wanted
-			new_attendee = Attendee.new(user_id: @user.id, event_id: @event.id, role: 'user')
+			new_attendee = Attendee.new(user_id: @user.id, event_id: @event.id, user_role: 'user')
 			if new_attendee.save
       	redirect_to user_path(@user.id), notice: "Woohoo! Your ticket has been booked!"
     	else
@@ -36,7 +36,7 @@ class UsersController < ApplicationController
 
 	# joins a logged in user to an event without asking for their details again
 	def join_event
-		new_attendee = Attendee.new(user_id: current_user.id, event_id: params[:id], role: 'user')
+		new_attendee = Attendee.new(user_id: current_user.id, event_id: params[:id], user_role: 'user')
 
 		if new_attendee.save
     	redirect_to user_path, alert: "Woohoo! Your ticket has been booked!"

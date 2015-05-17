@@ -14,7 +14,7 @@ class ApplicationController < ActionController::Base
   end
 
   def all_speakers
-    speakers = Attendee.where(role: 'speaker')
+    speakers = Attendee.where(user_role: 'speaker')
     speakers.map do |speaker|
       User.find(speaker.user_id)
     end
