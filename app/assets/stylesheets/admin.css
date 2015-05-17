@@ -1,0 +1,76 @@
+/*JLW deliberately made this CSS specific so that it will not conflict with other rules*/
+.admin fieldset {
+    width: 300px;
+    margin: 0 auto;
+    border: 2px;
+    border-color: black;
+    border-style: solid;
+}
+.admin fieldset legend {
+    font-size: 20px;
+    font-color: black;
+}
+label.admin-field {
+    text-align: left;
+    width: 100px;
+    float: left;
+    font-weight: bold;
+    margin-top: 1em;
+    font-color: black;
+}
+input.textbox-300 {
+    width: 300px;
+    float: left;
+}
+.admin fieldset p {
+    clear: both;
+    padding: 5px;
+}
+.admin-btn {
+    margin-top: 1em;
+    background: transparent;
+    font-size: 16px;
+    padding: 10px 20px 10px 20px;
+    border: solid #000000 2px;
+    text-decoration: none;
+}
+.admin-btn:hover {
+    background: #ffffff;
+    text-decoration: none;
+}
+.admin {
+    margin: 0 auto;
+    font-size:14px;
+    width:70%;
+    border-width: 1px;
+    border-color: #686767;
+    border-collapse: collapse;
+}
+.admin th {
+    font-size:12px;
+    background-color: #4d4b4b;
+    border-width: 1px;
+    padding: 8px;
+    border-style: solid;
+    border-color: #686767;
+    text-align:left;
+}
+.admin tr {
+    background-color: transparent;
+}
+.admin td {
+    font-size:12px;
+    border-width: 1px;
+    padding: 8px;
+    border-style: solid;
+    border-color: #686767;
+}
+.admin-left{
+    text-align: left;
+}
+.admin tr:hover {
+    background-color: #ffffff;
+}
+div .admin-nav-footer {
+    margin: 0 auto;
+}
