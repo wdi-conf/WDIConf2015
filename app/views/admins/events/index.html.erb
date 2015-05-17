@@ -1,0 +1,19 @@
+<h2>Events</h2>
+
+<table class="admin" border="1">
+  <tr><th>Title</th><th>Time</th><th>Maximum Tickets</th><th>Edit</th><th>Delete</th></tr>
+<% @events.each do |event| %>
+    <tr>
+        <td class="admin-left"><%= link_to event.title, admins_event_path(event) %></td>
+        <td><%= event.date_time %></td>
+        <td><%= event.max_tix %></td>
+        <td><%= link_to 'edit', edit_admins_event_path(event) %></td>
+
+        <td><%= link_to 'Destroy', admins_event_path(event), method: :delete %></td>
+    </tr>
+<% end %>
+</table>
+
+<%= render :partial => 'admins/pages/admin' %>
+
+
