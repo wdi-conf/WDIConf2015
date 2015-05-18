@@ -16,15 +16,17 @@
     <span class="title-speakers">
       <h2>Speakers</h2>
     </span>
-
+  
+  <div id="speakers-parent">
   <% all_speakers.each do |speaker| %>
       <div data-sr class="speaker-listing" id="speaker">
-        <%= image_tag('placeholder.gif')%>
+        <%= image_tag('placeholder.gif', :class => "speaker_img")%>
         <span class="name"><b><%= speaker.name %></b></span>
-        <p class="bio">
+        <p class="bio" id="bio">
         </p>
       </div>
     <% end %>
+  </div>
 
   </div>
 </div>
@@ -57,4 +59,7 @@
 
 <div class="team">
 </div>
+
+
+
 
