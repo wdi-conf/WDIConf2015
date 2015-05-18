@@ -12,23 +12,67 @@
 
 	<p><%= @event.description %></p>
 	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-	tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-	quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-	consequat. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-	tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-	quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-	consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-	cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-	proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-	<div class="buttons cf">
-		<button class="back"><%= link_to 'Back', events_path %></button>
+		tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+		quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+		consequat. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+		tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+		quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+		consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+		cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+		proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+		<div class="buttons cf">
+			<button class="back"><%= link_to 'Back', events_path %></button>
 
-		<button class="next">
-			<% if logged_in? %>
-			<%= link_to 'Attend', "/events/#{@event.id}/join", method: :post %>
-			<% else %>
+			<button class="next">
+				<% if logged_in? %>
+				<%= link_to 'Attend', "/events/#{@event.id}/join", method: :post %>
+				<% else %>
 				<%= link_to 'Book Now!', new_user_path(event_id: @event.id) %>
-			<% end %>
-		</button>
+				<% end %>
+			</button>
+		</div>
+
+		<!-- Login Modal -->
+		<div class="modal-background">
+			<div class="join-event-modal">
+				<div class="close-modal">X</div>
+				<h2>Join Event</h2>
+				<hr>
+
+				<%= form_for(@user) do |f| %>
+
+				<% if @user.errors.any? %>
+				<ul>
+					<% @user.errors.full_messages.each do |message| %>
+					<li><%= message %></li>
+					<% end %>
+				</ul>
+				<% end %>
+
+				<!-- Hidden field stores in the event id -->
+				<%= f.hidden_field :event_id, value: @event.id %>
+
+				<div class="field">
+					<%= f.label :name %>
+					<%= f.text_field :name %>
+				</div>
+
+				<div class="field">
+					<%= f.label :email %>
+					<%= f.text_field :email %>
+				</div>
+
+				<div class="field">
+					<%= f.label :password %>
+					<%= f.password_field :password %>
+				</div>
+
+				<div class="actions">
+					<%= f.submit %>
+				</div>
+				<% end %>
+
+			</div>
+		</div>
+
 	</div>
-</div>
