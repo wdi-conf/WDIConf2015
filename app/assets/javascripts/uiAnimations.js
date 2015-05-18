@@ -7,6 +7,9 @@ var bio = document.getElementsByClassName('bio');
 $('.speaker-listing').hover(function() {
   bio = $(this).find('.bio')
   $(bio).toggle("blind");
+  $('.speaker-listing').toggleClass('dimmed');
+  $(this).toggleClass('active');
+  $(bio).toggleClass('active');
 });
 });
 
