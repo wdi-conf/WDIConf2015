@@ -17,7 +17,7 @@
       <h2>Speakers</h2>
     </span>
 
-    <% @speakers.each do |speaker| %>
+  <% all_speakers.each do |speaker| %>
       <div data-sr class="speaker-listing" id="speaker">
         <%= image_tag('placeholder.gif')%>
         <span class="name"><b><%= speaker.name %></b></span>

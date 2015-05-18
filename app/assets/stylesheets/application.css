@@ -240,9 +240,9 @@ nav ul{
 
 /*---MEDIA QUERIES---*/
 
-@media only screen 
-  and (max-device-width: 736px) 
-  and (orientation: portrait) { 
+@media only screen
+  and (max-device-width: 736px)
+  and (orientation: portrait) {
 
     .home img{
       width: 100%;
@@ -267,8 +267,8 @@ nav ul{
   .speaker-listing .name{
     font-size: 10px;
   }
-  
-  
+
+
 }
 
 
