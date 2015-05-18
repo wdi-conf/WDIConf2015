@@ -10,6 +10,10 @@ class Admins::EventsController < AdminsController
 
   def index
     @events = Event.all
+    @events.each do |event|
+      num_attending = Attendee.number_attendees
+      event.push(num_attending)
+    end
   end
 
   def show
