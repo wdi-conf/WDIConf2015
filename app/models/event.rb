@@ -4,12 +4,12 @@ class Event < ActiveRecord::Base
 
 
 	def speaker
-		self.users.where(role: 'speaker').first
+		User.find(self.attendees.find_by(user_role: 'speaker').user_id)
 	end
 
 	def tickets_available
 		max_tix = self.max_tix
-		tix_sold = self.users.count -1 # minus 1 because the speaker is included in Event.users
+		tix_sold = self.attendees.where(user_role: 'user').count
 		max_tix - tix_sold
 	end
 end

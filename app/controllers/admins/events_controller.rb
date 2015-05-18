@@ -10,6 +10,10 @@ class Admins::EventsController < AdminsController
 
   def index
     @events = Event.all
+    @events.each do |event|
+      num_attending = Attendee.number_attendees
+      event.push(num_attending)
+    end
   end
 
   def show
@@ -34,6 +38,8 @@ class Admins::EventsController < AdminsController
     @event.destroy
     redirect_to '/admins/events'
   end
+
+  private
 
   def event_params
     params.require(:event).permit(:title, :description, :date_time, :max_tix)

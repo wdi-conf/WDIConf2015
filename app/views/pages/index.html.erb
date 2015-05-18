@@ -17,7 +17,7 @@
       <h2>Speakers</h2>
     </span>
 
-    <% @speakers.each do |speaker| %>
+  <% all_speakers.each do |speaker| %>
       <div data-sr class="speaker-listing" id="speaker">
         <%= image_tag('placeholder.gif')%>
         <span class="name"><b><%= speaker.name %></b></span>
@@ -28,3 +28,33 @@
 
   </div>
 </div>
+
+<div class="about">
+</div>
+
+<div class="schedule">
+</div>
+
+<div class="contact white-page hor-allign" id="contact">
+  <div class="default-container">
+    <div data-sr class="hor-wrapper">
+      <span class="contact-title">Contact Us</span>
+      <div class="contact-button-wrapper">
+      <p>
+        Got questions? Comments? Maybe even feeling a little bit lonely?<br>
+        Contact us below.
+      </p>
+      <a href="#"><div class="contact-button">EMAIL</div></a>
+      <a href="#"><div class="contact-button">TWITTER</div></a>
+      <a href="#"><div class="contact-button">MATTS MOBILE</div></a>
+    </div>
+    </div>
+  </div>
+</div>
+
+<div class="sponsors">
+</div>
+
+<div class="team">
+</div>
+

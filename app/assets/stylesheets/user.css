@@ -1,0 +1,55 @@
+.inner-container {
+	padding-top: 50px;
+	padding-left: 100px;
+}
+
+.inner-container h1 {
+	color: white;
+}
+
+.tickets-container {
+	margin-top: 50px;
+}
+
+.each-ticket {
+	margin-bottom: 20px;
+}
+
+.ticket-details {
+	display: inline-block;
+	border: solid 2px #fff;
+	border-radius: 10px;
+	padding: 30px 30px 15px 30px;
+	width: 60%;
+}
+
+.ticket-details h3 {
+	margin: 0;
+}
+
+.ticket-details a {
+	color: #fff;
+}
+
+.ticket-actions {
+	display: inline-block;
+	vertical-align: top;
+	max-width: 25%;
+	margin-top: 30px;
+	margin-left: 30px;
+	text-align: center;
+}
+
+.event-speaker {
+	margin-top: 5px;
+	margin-bottom: 25px;
+}
+
+.ticket-time {
+	float: right;
+}
+
+.ticket-time span {
+	color: #fff;
+	margin-left: 20px;
+}

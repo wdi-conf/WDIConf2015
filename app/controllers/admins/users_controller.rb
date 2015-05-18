@@ -35,6 +35,8 @@ class Admins::UsersController < AdminsController
     redirect_to '/admins/users'
   end
 
+  private
+
   def user_params
     params.require(:user).permit(:name, :email, :role, :bio)
   end
