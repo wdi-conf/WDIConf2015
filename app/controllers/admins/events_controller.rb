@@ -35,6 +35,8 @@ class Admins::EventsController < AdminsController
     redirect_to '/admins/events'
   end
 
+  private
+
   def event_params
     params.require(:event).permit(:title, :description, :date_time, :max_tix)
   end
