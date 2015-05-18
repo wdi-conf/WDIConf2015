@@ -23,17 +23,18 @@
 		<div class="buttons cf">
 			<button class="back"><%= link_to 'Back', events_path %></button>
 
-			<button class="next">
-				<% if logged_in? %>
+			<% if logged_in? %>
+				<button class="next">
 				<%= link_to 'Attend', "/events/#{@event.id}/join", method: :post %>
-				<% else %>
-				<%= link_to 'Book Now!', new_user_path(event_id: @event.id) %>
-				<% end %>
+			<% else %>
+				<button class="next show-modal">
+				Book Now!
+			<% end %>
 			</button>
 		</div>
 
 		<!-- Login Modal -->
-		<div class="modal-background">
+		<div class="modal-background" id="join-event-modal">
 			<div class="join-event-modal">
 				<div class="close-modal">X</div>
 				<h2>Join Event</h2>

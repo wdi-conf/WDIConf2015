@@ -53,6 +53,7 @@ html {
 /*----------------------------------*/
 
 .modal-background {
+	display: none;
 	position: fixed;
 	top:0;
 	left:0;
@@ -70,6 +71,7 @@ html {
 	width: 40%;
 	border-radius: 10px;
 	padding: 30px;
+	user-select: none;
 }
 
 .join-event-modal .close-modal {
@@ -107,7 +109,9 @@ html {
 	margin: 30px;
 }
 
-
+.close-modal {
+	padding: 10px;
+}
 
 
 
