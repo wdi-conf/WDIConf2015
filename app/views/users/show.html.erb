@@ -1,0 +1,31 @@
+<div class="red-page">
+  <div class="inner-container">
+		<h1>Welcome <%= current_user.name %></h1>
+
+		<div class="tickets-container">
+			<h2 class=>My Tickets (<%= @events.count %>)</h2>
+
+			<% @events.each do |event| %>
+			<div class="each-ticket">
+				<div class="ticket-details">
+					<div class="ticket-time">
+						22/5/15 <span>9:30 am</span>
+					</div>
+					<h3><%= link_to event.title, event_path(event.id) %></h3>
+				<p class="event-speaker">- <%= event.speaker.name %></p>
+					<p><%= event.description %></p>
+				</div>
+				<div class="ticket-actions">
+					<p>Can't make the event any more?</p>
+					<button>Cancel My Ticket</button>
+				</div>
+			</div>
+			<% end %>
+		</div>
+
+
+
+  </div>
+</div>
+
+

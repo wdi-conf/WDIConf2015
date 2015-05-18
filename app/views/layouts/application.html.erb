@@ -30,20 +30,20 @@
     <!-- start of login -->
     <li>
     <div class="logged-in">
-     <% if logged_in? %> 
+     <% if logged_in? %>
       <a href="#"><%= current_user.name %></a>
-       <%= form_tag '/logout', :method => :delete do %> 
+       <%= form_tag '/logout', :method => :delete do %>
         <button>Logout</button>
        <% end %>
       <% else %>
-        <%= link_to('Login', login_path) %> 
+        <%= link_to('Login', login_path) %>
         <a href="/login"><i class="fa fa-sign-in"></i></a>
-      <% end %> 
+      <% end %>
 
-      <% if logged_in? && current_user.role == "speaker" %>
+      <% #if logged_in? && current_user.role == "speaker" %>
         <!-- <a href="#">View Profile</a> -->
-      <% end %> 
-    </div> 
+      <% #end %>
+    </div>
     <!-- end of login  -->
     </li>
     </ul>
