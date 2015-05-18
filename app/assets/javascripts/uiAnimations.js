@@ -7,7 +7,6 @@ var bio = document.getElementsByClassName('bio');
 $('.speaker-listing').hover(function() {
   bio = $(this).find('.bio')
   $(bio).toggle("blind");
-  $('body').fadeOut(2000);
 });
 });
 
