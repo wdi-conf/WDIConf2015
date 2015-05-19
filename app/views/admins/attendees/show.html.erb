@@ -4,7 +4,7 @@
       <tr><th>name</th><th>remove</th></tr>
       <% @attendees.each do |attendee| %>
           <tr>
-            <td><%= attendee.name %></td><td>remove</td>
+            <td><%= attendee.name %></td><td><%= link_to 'remove', admins_attendee_path(attendee, :event_id => @event.id), method: :delete %></td>
           </tr>
         <% end %>
 

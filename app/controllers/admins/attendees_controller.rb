@@ -31,15 +31,17 @@ class Admins::AttendeesController < AdminsController
   end
 
   def destroy
-    @event = Event.find(params[:id])
-    @event.destroy
-    redirect_to '/admins/events'
+    # would have perhaps been better to use nested resources, but not enough time.
+    @attendence = Attendee.find_by(:event_id => params[:event_id], :user_id => params[:id])
+    @attendence.destroy
+
+    redirect_to "/admins/attendees/#{params[:event_id]}"  #todo may be a helper method for this?
   end
 
   private
 
-  def event_params
-    params.require(:event).permit(:title, :description, :date_time, :max_tix)
+  def attendee_params
+    params.require(:attendee).permit(:title, :description, :date_time, :max_tix)   #JLW -don't seem to have to put event_id in here. Weird.
   end
 
 end
