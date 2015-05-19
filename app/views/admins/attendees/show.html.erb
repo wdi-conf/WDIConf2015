@@ -1,13 +1,12 @@
 <div class="admin-pages">
     <h1>Attendees for event "<%= @event.title %>":</h1>
     <table class="admin" border="1">
-      <tr><th>name</th></tr>
+      <tr><th>name</th><th>remove</th></tr>
       <% @attendees.each do |attendee| %>
           <tr>
-            <td><%= attendee.name %></td>
+            <td><%= attendee.name %></td><td>remove</td>
           </tr>
         <% end %>
-
 
     </table>
     <%= render :partial => 'admins/pages/admin' %>
