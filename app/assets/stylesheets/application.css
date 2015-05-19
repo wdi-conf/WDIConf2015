@@ -172,8 +172,8 @@ hr{
 /*---SPEAKERS PAGE---*/
 .speaker-listing{
   transition: 0.5s ease all;
-  width: 20%;
-  margin: 2% 2% 2% 2%;
+  width: 30%;
+  margin: 1% 1% 1% 1%;
   background-color: #e74c3c;
   display: inline-block;
   text-overflow: ellipsis;
@@ -182,7 +182,7 @@ hr{
 .title-speakers{
   display: block;
   text-align: center;
-  font-size: 28px;
+  font-size: 50px;
 }
 
 .speaker-listing img{
@@ -205,13 +205,13 @@ hr{
 }
 
 .speaker-listing .bio{
-  height: 200px;
-  width: 14%;
-  margin: 0;
-  background-color: white;
-  display: none;
-  z-index: 1;
-  position: absolute;
+  
+}
+
+.bio {
+  background: black;
+  z-index: 999;
+  position:absolute;  
 }
 
 
@@ -253,14 +253,14 @@ hr{
 }
 
 .active{
-  opacity: 1;
+  opacity: 1; 
 }
 
 /*---ABOUT PAGE---*/
 .about-title{
   display: block;
   text-align: center;
-  font-size: 28px;
+  font-size: 50px;
   color: white;
 }
 
