@@ -10,70 +10,19 @@
   </div>
 </div>
 
-<div class="speakers white-page hor-allign" id="speakers">
-  <div class="default-container">
 
-    <span class="title-speakers">
-      <h2>Speakers</h2><hr>
-    </span>
+<%= render 'speakers' %>
 
-  <% all_speakers.each do |speaker| %>
-      <div data-sr class="speaker-listing" id="speaker">
-        <%= image_tag('dom.jpg', :class => "speaker_img")%>
-        <span class="name"><b><%= speaker.name %></b></span>
-        <p class="bio" id="bio"><%= speaker.bio %>
-        </p>
-      </div>
-    <% end %>
-  </div>
+<%= render 'about' %>
 
-  </div>
-</div>
+<%= render 'schedule' %>
 
-<div class="about red-page hor-allign" id="about">
-  <div class="default-container">
-    <div data-sr class="hor-wrapper">
-      <span class="about-title">About</span>
-      <hr>
-      <p>
-        After an incredibly successful inaugural year in 2014, WDI Conf returns in 2015, quickly becoming the must-attend event in the Melbourne meet-up calendar. 
-        The broad scope of presentations reveal the extent that technology is influencing and shaping our lives. Many aspects that make Melbourne great; food, humour and coffee are touched upon in these talks, making WDI Conf a place for all, not just those within the tech community.
-        Located in the heart of Melbourne this two-day event will showcase those in the Melbourne tech community who are shaping the future through cutting edge techniques and the utilisation of ahead-of-the-curve trends within the digital sphere and beyond.
-      </p>
-    </div>
-  </div>
-</div>
+<%= render 'contact' %>
 
-<div class="schedule">
-</div>
+<%= render 'sponsors' %>
 
-<div class="contact white-page hor-allign" id="contact">
-  <div class="default-container">
-    <div data-sr class="hor-wrapper">
-      <span class="contact-title">Contact Us</span>
-      <div class="contact-button-wrapper">
-      <p>
-        Got questions? Comments? Maybe even feeling a little bit lonely?<br>
-        Contact us below.
-      </p>
-      <a href="#"><div class="contact-button">EMAIL</div></a>
-      <a href="#"><div class="contact-button">TWITTER</div></a>
-      <a href="#"><div class="contact-button">MATTS MOBILE</div></a>
-    </div>
-    </div>
-  </div>
-</div>
+<%= render 'team' %>
 
-<div class="sponsors red-page hor-allign" id="sponsors">
-  <div class="default-container">
-    <div data-sr class="hor-wrapper">
-      <span class="sponsors-title">Sponsors</span>
-    </div>
-  </div>
-</div>
-
-<div class="team">
-</div>
 
 
 
