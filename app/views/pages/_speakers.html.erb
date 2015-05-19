@@ -8,8 +8,9 @@
   <% all_speakers.each do |speaker| %>
       <div data-sr class="speaker-listing" id="speaker">
         <%= image_tag('placeholder.gif', :class => "speaker_img")%>
-        <span class="name"><b><%= speaker.name %></b></span>
+        <span class="name"><strong><%= speaker.name %></strong></span>
         <p class="bio" id="bio">
+          <%= speaker.bio %>
         </p>
       </div>
     <% end %>
