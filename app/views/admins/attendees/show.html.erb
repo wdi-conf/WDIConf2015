@@ -1,8 +1,16 @@
-<h1>Attendees for event <%= @event.title %> are:</h1>
-<h2><%= @event.attendees %></h2>
-<h2><%= @attendee %></h2>
+<div class="admin-pages">
+    <h1>Attendees for event "<%= @event.title %>":</h1>
+    <table class="admin" border="1">
+      <tr><th>name</th></tr>
+      <% @attendees.each do |attendee| %>
+          <tr>
+            <td><%= attendee.name %></td>
+          </tr>
+        <% end %>
 
-<%= render :partial => 'admins/pages/admin' %>
 
+    </table>
+    <%= render :partial => 'admins/pages/admin' %>
+</div>
 
 

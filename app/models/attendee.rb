@@ -13,7 +13,11 @@ class Attendee < ActiveRecord::Base
   end
 
   def attendee_list(event)
-    self.attendees.where(event_id: event.event_id)
+     attendees.where(event_id: @event)
+
+
+
+
   end
 
 end

@@ -13,7 +13,8 @@ class Admins::AttendeesController < AdminsController
   end
 
   def show
-    @attendee = Attendee.find(params[:id])
+    @event = Event.find(params[:id])
+    @attendees = @event.users
   end
 
   def update
@@ -42,3 +43,5 @@ class Admins::AttendeesController < AdminsController
   end
 
 end
+
+
