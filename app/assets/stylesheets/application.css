@@ -39,12 +39,11 @@ nav ul{
   padding: 0;
 }
 
-nav ul a li{
+nav ul li{
   width: 100%;
-  margin-bottom: 50px;
-  height: 4vh;
+  margin-bottom: 20px;
   line-height: 4vh;
-  padding-right: 1em;
+  padding: 0.6em 1em 0.6em 0;
 }
 
 nav ul a{
@@ -54,9 +53,13 @@ nav ul a{
   text-decoration: none;
 }
 
-nav ul a li:hover{
+nav ul li:hover{
   transition: 0.2s ease all;
   background-color: #e74c3c;
+  color: white;
+}
+
+nav ul a:hover {
   color: white;
 }
 
@@ -84,11 +87,6 @@ nav .fa-bars{
 
 nav ul{
   list-style-type: none;
-}
-
-.logged-in{
-  width: 100%;
-  text-align: center;
 }
 
 .off-white{
