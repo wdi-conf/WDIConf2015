@@ -36,14 +36,18 @@ class UsersController < ApplicationController
 
 	# joins a logged in user to an event without asking for their details again
 	def join_event
-		new_attendee = Attendee.new(user_id: current_user.id, event_id: params[:id], user_role: 'user')
+		event = Event.find(params[:id])
 
-		if new_attendee.save
-    	redirect_to user_path, alert: "Woohoo! Your ticket has been booked!"
-  	else
-  		render :show, alert: "Something went wrong! Please try again."
-  	end
+		# don't add them if they are already attending this event
+		unless event.attendees.find_by(user_id: current_user.id)
+			new_attendee = Attendee.new(user_id: current_user.id, event_id: params[:id], user_role: 'user')
 
+			# couldn't save the user to this event for some reason
+			unless new_attendee.save
+	  		render :show, alert: "Something went wrong! Please try again."
+	  	end
+	  end
+	  redirect_to user_path(current_user.id)
 	end
 
 end

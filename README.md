@@ -23,7 +23,11 @@ Then set up locally:
 7. rails server (or rails s)
 8. go to localhost:3000 to see if it all worked.
 
-Rspec testing setup (once only):
+Rspec testing setup (after any migrations):
+
+*rake db:test:prepare*
+
+If there are any errors in the above, try the following:
 
 1. rake db:create RAILS_ENV=test  (may already exist)
 2. rake db:migrate RAILS_ENV=test
@@ -31,8 +35,7 @@ Rspec testing setup (once only):
 
 you can drop the test database with: *rake db:drop RAILS_ENV=test*
 
-you could also just try:
-*rake db:test:prepare*
+
 
 
 ## About the site:
