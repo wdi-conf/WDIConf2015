@@ -1,4 +1,4 @@
-class Admins::EventsController < AdminsController
+class Admins::AttendeesController < AdminsController
 
   def create
     @event = Event.new(event_params)
@@ -13,7 +13,7 @@ class Admins::EventsController < AdminsController
   end
 
   def show
-    @event = Event.find(params[:id])
+    @attendee = Attendee.find(params[:id])
   end
 
   def update

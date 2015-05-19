@@ -12,4 +12,8 @@ class Attendee < ActiveRecord::Base
     max_tix - tix_sold
   end
 
+  def attendee_list(event)
+    self.attendees.where(event_id: event.event_id)
+  end
+
 end
