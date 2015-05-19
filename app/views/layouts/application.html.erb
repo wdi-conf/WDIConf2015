@@ -33,8 +33,7 @@
               <button>Logout</button>
             <% end %>
           <% else %>
-            <%= link_to('Login', login_path) %>
-            <a href="/login"><i class="fa fa-sign-in"></i></a>
+            <a href="#login" class="show-modal">Login<i class="fa fa-sign-in"></i></a>
           <% end %>
 
          <% #if logged_in? && current_user.role == "speaker" %>
