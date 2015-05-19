@@ -1,7 +1,7 @@
 <div class="admin-pages">
     <h1>Attendees for event "<%= @event.title %>":</h1>
     <table class="admin" border="1">
-      <tr><th>name</th><th>remove</th></tr>
+      <tr><th>name</th><th>remove<%= link_to 'add', new_admins_attendee_path(@event), method: :get %></th></tr>
       <% @attendees.each do |attendee| %>
           <tr>
             <td><%= attendee.name %></td><td><%= link_to 'remove', admins_attendee_path(attendee, :event_id => @event.id), method: :delete %></td>
