@@ -37,3 +37,43 @@ you can drop the test database with: *rake db:drop RAILS_ENV=test*
 
 
 
+
+## About the site:
+WDI Conf is a website created for a semi-fictional tech conference. The site was based on current design trends found on many conference websites, namely; a single page application, centre-aligned text, subtle animations to guide you through the site and a simple colour palate.
+
+## Team Roles
+Justin: Back end. Deployment
+Dominic: Login in authentication, back end
+Mike: Git Lord, back end
+Aden: CSS master
+Matt: Database concepts and design, back end
+Jeff: Project manager
+Nick: Content manager
+
+## What we used:
+- Pivotal tracker for task delegation
+- Ruby on Rails
+- Javascript Libraries: scrollReveal, smooth-scroll
+- CSS
+- Postgresql
+- Rspec testing
+- Code Ship for continuous deployment
+- Static code analysis with Code Climate
+
+## What worked 
+- Clearly defined roles 
+- Opportunities for partner coding
+- Deployment for the site from the initial stages of the project
+- Clear concept about the back-end logic, revised when needed
+- Everyone got to work with their strengths
+- Most members took a risk and tried something new
+- A relaxed environment
+
+## What didn’t
+- Occasional gitHub glitches
+- Adapting to a new gitHub workflow (for some)
+
+
+
+
+
