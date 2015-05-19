@@ -32,6 +32,9 @@ gem 'pg'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
+# code climate static code quality analysis. This allows test coverage %
+gem "codeclimate-test-reporter", group: :test, require: nil
+
 group :development, :test do
   # Required by Windows devs
   # allows time zone data to be accessed on windows
