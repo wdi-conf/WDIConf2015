@@ -161,16 +161,26 @@ nav ul{
   display: none;
 }
 
+hr{
+  width: 50%;
+}
+
 
 
 /*---SPEAKERS PAGE---*/
 .speaker-listing{
+  transition: 0.5s ease all;
   width: 20%;
   margin: 2% 2% 2% 2%;
   background-color: #e74c3c;
   display: inline-block;
   text-overflow: ellipsis;
+}
 
+.title-speakers{
+  display: block;
+  text-align: center;
+  font-size: 28px;
 }
 
 .speaker-listing img{
@@ -188,8 +198,8 @@ nav ul{
   text-decoration: bold;
   line-height: 1vw;
   white-space: nowrap;
-  background-color: #e74c3c;
-  color: white;
+  background-color: white;
+  color: #e74c3c;
 }
 
 .speaker-listing .bio{
@@ -198,6 +208,7 @@ nav ul{
   margin: 0;
   background-color: white;
   display: none;
+  z-index: 1;
   position: absolute;
 }
 
@@ -234,7 +245,14 @@ nav ul{
   text-align: center;
 }
 
+.dimmed{
+  transition: 0.5s ease all;
+  opacity: 0.3;
+}
 
+.active{
+  opacity: 1;
+}
 
 
 
