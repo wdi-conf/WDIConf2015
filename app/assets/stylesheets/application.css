@@ -86,6 +86,16 @@ nav ul{
   list-style-type: none;
 }
 
+.logged-in {
+  text-align: center;
+}
+
+.logged-in a {
+  display: block;
+  margin-top: 50px;
+  margin-bottom: 15px;
+}
+
 .off-white{
   background-color: #ebebeb;
   height: 100%;
@@ -107,6 +117,11 @@ nav ul{
   align-items: center;
 }
 
+
+.notice {
+  display: block;
+  text-align: center;
+}
 
 
 /*---END OF LAYOUT STYLES---*/

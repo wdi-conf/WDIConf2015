@@ -13,6 +13,15 @@
 
 <body>
 
+  <% if flash[:notice] %>
+  <div class="modal-background notice" id="join-event-modal">
+  <div class="join-event-modal">
+    <div class="close-modal">X</div>
+    <%= flash[:notice] %>
+  </div>
+</div>
+  <% end %>
+
   <nav class="default" id="navbar">
     <ul>
       <a data-scroll href="#home"><li><i class="fa fa-bars"></i></li></a>
@@ -26,17 +35,15 @@
 
       <!-- start of login -->
       <% if logged_in? %>
-        <a href="#"><li><%= current_user.name %></li></a>
+      <div class="logged-in">
+        <%= link_to current_user.name, user_path(current_user.id) %>
         <%= form_tag '/logout', :method => :delete do %>
           <button>Logout</button>
         <% end %>
+      </div>
       <% else %>
         <a href="#login" class="show-modal"><li>Login<i class="fa fa-sign-in"></i></li></a>
       <% end %>
-
-      <% #if logged_in? && current_user.role == "speaker" %>
-      <!-- <a href="#">View Profile</a> -->
-      <% #end %>
       <!-- end of login  -->
    </ul>
  </nav>

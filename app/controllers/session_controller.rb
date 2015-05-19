@@ -2,23 +2,18 @@
 
 class SessionController < ApplicationController
 
-  #login form
-  def new
-    
-  end
-
   #logging in
   def create
     @user = User.find_by(email: params[:email])
 
-#check if we have @user 
+    #check if we have @user
     if @user && @user.authenticate(params[:password])
       session[:user_id] = @user.id
       # correct password
-      redirect_to root_path # same as routing to '/'
+      redirect_to user_path(@user.id)
     else
-      #incorrect email or password
-      render :new
+      # incorrect email or password
+      redirect_to root_path, :notice => "Login was unsuccessful. Please try again."
     end
   end
 
