@@ -10,59 +10,19 @@
   </div>
 </div>
 
-<div class="speakers white-page hor-allign" id="speakers">
-  <div class="default-container">
 
-    <span class="title-speakers">
-      <h2>Speakers</h2><hr>
-    </span>
+<%= render 'speakers' %>
 
-  <% all_speakers.each do |speaker| %>
-      <div data-sr class="speaker-listing" id="speaker">
-        <%= image_tag('placeholder.gif', :class => "speaker_img")%>
-        <span class="name"><b><%= speaker.name %></b></span>
-        <p class="bio" id="bio"><%= speaker.bio %>
-        </p>
-      </div>
-    <% end %>
-  </div>
+<%= render 'about' %>
 
-  </div>
-</div>
+<%= render 'schedule' %>
 
-<div class="about">
-</div>
+<%= render 'contact' %>
 
-<div class="schedule">
-</div>
+<%= render 'sponsors' %>
 
-<div class="contact white-page hor-allign" id="contact">
-  <div class="default-container">
-    <div data-sr class="hor-wrapper">
-      <span class="contact-title">Contact Us</span>
-      <div class="contact-button-wrapper">
-      <p>
-        Got questions? Comments? Maybe even feeling a little bit lonely?<br>
-        Contact us below.
-      </p>
-      <a href="#"><div class="contact-button">EMAIL</div></a>
-      <a href="#"><div class="contact-button">TWITTER</div></a>
-      <a href="#"><div class="contact-button">MATTS MOBILE</div></a>
-    </div>
-    </div>
-  </div>
-</div>
+<%= render 'team' %>
 
-<div class="sponsors red-page hor-allign" id="sponsors">
-  <div class="default-container">
-    <div data-sr class="hor-wrapper">
-      <span class="sponsors-title">Sponsors</span>
-    </div>
-  </div>
-</div>
-
-<div class="team">
-</div>
 
 
 

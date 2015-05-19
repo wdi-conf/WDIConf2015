@@ -20,6 +20,8 @@ html, body{
   width: 100%;
   margin: 0;
   font-family: raleway;
+  background: linear-gradient(135deg, rgba(0,0,0,0) 50%, rgba(0,0,0,0.5) 50%) fixed;
+
 
 }
 
@@ -119,14 +121,14 @@ nav ul{
 .red-page{
   width: 100%;
   min-height: 100%;
-  background: linear-gradient(135deg, #e74c3c 50%, #e56054 50%);
-  /*background: #e74c3c;*/
+  /*background: linear-gradient(135deg, #e74c3c 50%, #e56054 50%);*/
+  background: rgba(231,76,60,0.9);
 }
 
 .white-page{
   width: 100%;
   min-height: 100%;
-  background-color: #ebebeb;
+  background-color: rgba(235,235,235,0.9);
 }
 
 .default-container{
@@ -254,13 +256,27 @@ hr{
   opacity: 1;
 }
 
+/*---ABOUT PAGE---*/
+.about-title{
+  display: block;
+  text-align: center;
+  font-size: 28px;
+  color: white;
+}
+
+.about p{
+  text-align: center;
+  font-size: 24px;
+}
+
+
 
 
 /*---MEDIA QUERIES---*/
 
 @media only screen
   and (max-device-width: 736px)
-  and (orientation: portrait) {
+ {
 
     .home img{
       width: 100%;
@@ -279,16 +295,15 @@ hr{
 
 
   .default-container{
-    padding-left: 50px;
+    /*padding-left: 50px;*/
   }
 
   .speaker-listing .name{
-    font-size: 10px;
+    /*font-size: 10px;*/
   }
 
 
 }
-
 
 
 
