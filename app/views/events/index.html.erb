@@ -1,12 +1,25 @@
+    <p class="page-title">Events Schedule</p>
+    <link href='//fonts.googleapis.com/css?family=Roboto+Condensed' rel='stylesheet' type='text/css'>
 
-    <span class="page-title">Events</span>
+<div class="button-group filters-button-group">
+  <button class="button" data-filter="front">Frontend</button>
+  <button class="button" data-filter="back">Backend</button>
+</div>
 
 
-    <% @events.each do |event| %>
-    	<h3><%= event.title %></h3>
-    	<p><%= event.description %></p>
-    	<h4><%= event.speaker.name %></h4>
-    	<p><strong><%= event.date_time.to_s[11,5] %></strong></p>
-    	<p></p>
-    	<button><%= link_to 'Book Now!', event_path(event.id) %></button>
-    <% end %>
+<div class="grid">
+  <% @events.each do |event| %>
+    <div class="element-item" data-category="transition">
+      <h3 class= "events-title"><%= event.title %></h3>
+      <p class= "events-description"><%= event.description %></p>
+      <h4 class= "events-speaker"><%= event.speaker.name %></h4>
+      <p class= "events-time"><%= event.date_time.to_s[11,5] %></p>
+      <p></p>
+      <button class="btnBookNow"><%= link_to 'BOOK NOW', event_path(event.id) %></button>
+    </div>
+  <% end %>
+</div>
+
+
+
+ <script src="//cdnjs.cloudflare.com/ajax/libs/jquery.isotope/2.2.0/isotope.pkgd.min.js"></script>
