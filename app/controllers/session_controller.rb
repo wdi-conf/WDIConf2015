@@ -13,7 +13,7 @@ class SessionController < ApplicationController
       redirect_to user_path(@user.id)
     else
       # incorrect email or password
-      redirect_to root_path, :notice => "Login was unsuccessful. Please try again."
+      redirect_to :back, :notice => "Login was unsuccessful. Please try again."
     end
   end
 

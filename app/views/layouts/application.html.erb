@@ -13,15 +13,6 @@
 
 <body>
 
-  <% if flash[:notice] %>
-  <div class="modal-background notice" id="join-event-modal">
-  <div class="join-event-modal">
-    <div class="close-modal">X</div>
-    <%= flash[:notice] %>
-  </div>
-</div>
-  <% end %>
-
   <nav class="default" id="navbar">
     <ul>
       <a data-scroll href="#home"><li><i class="fa fa-bars"></i></li></a>
@@ -42,11 +33,27 @@
         <% end %>
       </div>
       <% else %>
-        <a href="#login" class="show-modal"><li>Login<i class="fa fa-sign-in"></i></li></a>
+        <a href="#login" class="login-modal"><li>Login<i class="fa fa-sign-in"></i></li></a>
       <% end %>
       <!-- end of login  -->
    </ul>
  </nav>
+
+
+  <!-- Display any errors (in a popup) -->
+  <% if flash[:notice] %>
+    <div class="modal-background notice" id="join-event-modal">
+      <div class="join-event-modal">
+        <div class="close-modal">X</div>
+        <%= flash[:notice] %>
+      </div>
+    </div>
+  <% end %>
+  <!-- end errors section -->
+
+  <!-- Display login popup when needed-->
+  <%= render 'shared/login' %>
+  <!-- end login popup -->
 
  <%= yield %>
 
