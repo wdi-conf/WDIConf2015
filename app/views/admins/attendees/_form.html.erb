@@ -1,0 +1,23 @@
+ <%= form_for [:admins, @event] do |f| %>  <!--need :admins since namespaced-->
+     <div class="admin">
+        <fieldset>
+             <legend>event</legend>
+             <p><%= f.label :title, :class =>'admin-field' %></p>
+             <p><%= f.text_field :title, :class =>'textbox-300' %></p>
+
+             <p><%= f.label :description, :class =>'admin-field' %></p>
+             <p><%= f.text_field :description, :class =>'textbox-300' %></p>
+
+             <p><%= f.label :date_time, :class =>'admin-field' %></p>
+             <p><%= f.datetime_local_field :date_time, :class =>'textbox-300' %></p>     <!--can't call this datetime_field because it is a helper??-->
+
+             <p><%= f.label :max_tix, :class =>'admin-field' %></p>
+             <p><%= f.text_field :max_tix, :class =>'textbox-300' %></p>
+
+             <p><%= f.submit :class =>'admin-btn' %></p>
+         </fieldset>
+     </div>
+ <% end %>
+
+ <!--http://api.rubyonrails.org/classes/ActionView/Helpers/FormHelper.html-->
+
