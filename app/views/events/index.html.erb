@@ -1,5 +1,7 @@
-    <p class="page-title">Events Schedule</p>
-    <link href='//fonts.googleapis.com/css?family=Roboto+Condensed' rel='stylesheet' type='text/css'>
+
+
+<p class="page-title">Events Schedule</p>
+<link href='//fonts.googleapis.com/css?family=Roboto+Condensed' rel='stylesheet' type='text/css'>
 
 <div class="button-group filters-button-group">
   <button class="button" data-filter="front">Frontend</button>
@@ -23,3 +25,14 @@
 
 
  <script src="//cdnjs.cloudflare.com/ajax/libs/jquery.isotope/2.2.0/isotope.pkgd.min.js"></script>
+
+  <script>
+  $( function() {
+    // init Isotope
+    var $grid = $('.grid-isotope').isotope({
+      itemSelector: '.element-item',
+      layoutMode: 'fitRows'
+    });
+  });
+ </script>
+
