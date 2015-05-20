@@ -2,17 +2,17 @@
   <div class="default-container">
 
     <span class="title-speakers">
-      <h2>Speakers</h2>
+      Speakers
       <hr>
     </span>
 
   <% all_speakers.each do |speaker| %>
       <div data-sr class="speaker-listing" id="speaker">
-        <%= image_tag('placeholder.gif', :class => "speaker_img")%>
-        <span class="name"><strong><%= speaker.name %></strong></span>
-        <p class="bio" id="bio">
+        <p class="bio hor-allign hidden">
           <%= speaker.bio %>
         </p>
+        <%= image_tag('dom.jpg', :class => "speaker_img")%>
+        <span class="name"><strong><%= speaker.name %></strong></span>
       </div>
     <% end %>
   </div>
