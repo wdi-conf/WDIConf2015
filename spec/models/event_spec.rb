@@ -36,11 +36,16 @@ describe 'Event' do
     expect(event.errors[:max_tix]).to include("can't be blank")
   end
 
+  it 'should return the correct speaker' do
+    user = Event.new()
+  end
+
 end
 
-
-
+# just commented some stuff out while I correct merge conflict.
 =begin
+
+
 def speaker
   User.find(self.attendees.find_by(user_role: 'speaker').user_id)
 end
@@ -53,4 +58,12 @@ def tickets_available
   max_tix = self.max_tix
   tix_sold = self.tickets_sold
   max_tix - tix_sold
+end
+
+def new_speaker_id
+  self.attendees.find_by(user_role: 'speaker').user_id
+end
 =end
+
+
+
