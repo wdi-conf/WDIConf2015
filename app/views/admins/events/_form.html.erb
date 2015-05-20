@@ -12,11 +12,7 @@
             <p><%= f.datetime_local_field :date_time, :class =>'textbox-300' %></p>     <!--can't call this datetime_field because it is a helper??-->
 
             <p><%= f.label "Speaker", :class =>'admin-field' %></p>
-            <p><%= f.collection_select(:attendee_id,@event.users,:id,:name) %></p>
-                                       <!-- id for the select tag -->
-                                           <!-- data collection for the list -->
-                                                        <!-- option tag value -->
-                                                            <!-- option tag text -->
+            <p><%= f.collection_select(:new_speaker_id,@event.users,:id,:name) %></p>
 
             <p><%= f.label :max_tix, :class =>'admin-field' %></p>
             <p><%= f.text_field :max_tix, :class =>'textbox-300' %></p>

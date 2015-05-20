@@ -17,7 +17,7 @@ class Event < ActiveRecord::Base
 		max_tix - tix_sold
 	end
 
-	def attendee_id
+	def new_speaker_id
 		self.attendees.find_by(user_role: 'speaker').user_id
 	end
 end
