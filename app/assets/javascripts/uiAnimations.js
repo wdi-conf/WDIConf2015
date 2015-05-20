@@ -7,9 +7,9 @@ var bio = document.getElementsByClassName('bio');
     bio = $(this).find('.bio')
       $(bio).toggleClass("active");
       $(bio).toggleClass("hidden");
+      console.log('click');
   });
-
-
+});
 
 // FOR BOUNCING ARROW ON HOMEPAGE LOAD
 
