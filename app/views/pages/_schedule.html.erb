@@ -16,7 +16,13 @@
 			<h4 class= "events-speaker"><%= event.speaker.name %></h4>
 			<p class= "events-time"><%= event.date_time.to_s[11,5] %></p>
 			<p></p>
-			<button class="btnBookNow"><%= link_to 'BOOK NOW', event_path(event.id) %></button>
+			<% if logged_in? %>
+				<button class="btnBookNow">
+					<%= link_to 'Attend', "/events/#{event.id}/join", method: :post %>
+				</button>
+			<% else %>
+				<button class="btnBookNow join-event-modal" data-event-id="<%= event.id %>">BOOK NOW</button>
+			<% end %>
 		</div>
 		<% end %>
 	</div>

@@ -12,7 +12,7 @@
 	width: 100vw;
 }
 
-.join-event-modal {
+.modal {
 	position: fixed;
 	top: 20%;
 	left: 30%;
@@ -22,14 +22,14 @@
 	padding: 30px;
 }
 
-.join-event-modal .close-modal {
+.modal .close-modal {
 	position: absolute;
 	top: 5%;
 	right: 5%;
 	cursor: pointer;
 }
 
-.join-event-modal h2 {
+.modal h2 {
 	margin-top: 0;
 	text-align: center;
 }
