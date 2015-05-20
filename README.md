@@ -3,7 +3,7 @@ Welcome to WDI-CONF!
 
 Code climate says our code has this grade: [![Code Climate](https://codeclimate.com/repos/55541b8ae30ba016b90111bd/badges/8f997a923138bd9bfdbe/gpa.svg)](https://codeclimate.com/repos/55541b8ae30ba016b90111bd/feed)
 
-Code climate says out test coverage is: [![Test Coverage](https://codeclimate.com/repos/55541b8ae30ba016b90111bd/badges/8f997a923138bd9bfdbe/coverage.svg)](https://codeclimate.com/repos/55541b8ae30ba016b90111bd/coverage)
+Code climate says our test coverage is: [![Test Coverage](https://codeclimate.com/repos/55541b8ae30ba016b90111bd/badges/8f997a923138bd9bfdbe/coverage.svg)](https://codeclimate.com/repos/55541b8ae30ba016b90111bd/coverage)
 
 Our continuous integration (CI) server that runs tests automatically says: [ ![Codeship Status for wdi-conf/WDIConf2015](https://codeship.com/projects/d6e13420-dc1b-0132-d98c-1e3fe125131b/status?branch=master)](https://codeship.com/projects/79879)
 

@@ -2,7 +2,7 @@
     <h2>Choose an event to see the attendees</h2>
 
     <table class="admin" border="1">
-      <tr><th>Title</th><th>Time</th><th>Tickets Sold</th><th>Maximum Tickets</th><th>Edit</th><th>Delete</th></tr>
+      <tr><th>Title</th><th>Tickets Sold</th><th>Maximum Tickets</th><th>Edit</th><th>Delete</th></tr>
     <% @events.each do |event| %>
         <tr>
             <td class="admin-left"><%= link_to event.title, admins_attendee_path(event) %></td>
