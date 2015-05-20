@@ -18,6 +18,24 @@ describe 'Event' do
     expect(event.errors[:title]).to include("can't be blank")
   end
 
+  it 'is invalid without a description' do
+    event = Event.new(description: nil)
+    event.valid?
+    expect(event.errors[:description]).to include("can't be blank")
+  end
+
+  it 'is invalid without a date_time' do
+    event = Event.new(date_time: nil)
+    event.valid?
+    expect(event.errors[:date_time]).to include("can't be blank")
+  end
+
+  it 'is invalid without max_tix defined' do
+    event = Event.new(max_tix: nil)
+    event.valid?
+    expect(event.errors[:max_tix]).to include("can't be blank")
+  end
+
 end
 
 
