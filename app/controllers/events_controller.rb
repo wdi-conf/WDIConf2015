@@ -1,9 +1,5 @@
 class EventsController < ApplicationController
 
-	def index
-		@events = Event.order("date_time")
-	end
-
 	def show
 		@user = User.new
 		@event = Event.find(params[:id])
