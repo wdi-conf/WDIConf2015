@@ -18,10 +18,3 @@ class Event < ActiveRecord::Base
 		max_tix - tix_sold
 	end
 end
-
-create_table "events", force: :cascade do |t|
-	t.string   "title"
-	t.text     "description"
-	t.datetime "date_time",   null: false
-	t.integer  "max_tix",     null: false
-end
