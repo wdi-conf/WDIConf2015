@@ -1,0 +1,126 @@
+
+#sponsor-container {
+  height: 100%;
+  width: 90%;
+  margin: 0 auto;
+  padding-left: 5%;
+}
+
+#sponsor-heading {
+  width: 80%;
+  font-family: 'Raleway', sans-serif;
+  color: white;
+  font-size: 1em;
+  padding-top: 1.5em;
+  padding-left: 1.5em;
+}
+
+
+
+
+/*************************************/
+
+.sponsor-view {
+    display: inline-block;
+    width: 20%;
+    height: 250px;
+    margin: 1%;
+    
+    float: left;
+
+    overflow: hidden;
+    position: relative;
+    text-align: center;
+    cursor: default;
+    background: #fff no-repeat center center;
+
+
+}
+.sponsor-view .mask, .sponsor-view .content {
+    width: 250px;
+    height: 250px;
+    position: absolute;
+    overflow: hidden;
+    top: 0;
+    left: 0
+}
+.sponsor-view img {
+    display: block;
+    width: 100%;
+    position: relative
+}
+.sponsor-view h2 {
+    text-transform: uppercase;
+    color: #fff;
+    text-align: center;
+    position: relative;
+    font-size: 17px;
+    padding: 10px;
+    background: rgba(0, 0, 0, 0.8);
+    margin: 40px 0 0 0;
+    font-family: 'Raleway';
+    font-weight: 500;
+}
+.sponsor-view p {
+    font-family: 'Raleway';
+    font-size: 12px;
+    position: relative;
+    color: #fff;
+    padding: 20px 20px 20px;
+    text-align: center
+}
+.sponsor-view a.info {
+    font-family: 'Raleway';
+    display: inline-block;
+    text-decoration: none;
+    padding: 7px 14px;
+    background: #e74c3c;
+    color: #fff;
+    text-transform: uppercase;
+    box-shadow: 0 0 1px #000
+}
+.sponsor-view a.info:hover {
+    box-shadow: 0 0 5px #000
+}
+
+
+.view-effect img {   
+  transition: all 0.2s ease-in; 
+}
+.view-effect .mask { 
+  background-color: rgba(0,0,0,0.8);
+  opacity: 0;
+  /*transform: translateX(460px) ;*/
+  transition: 0.4s ease all;
+}
+.view-effect h2{
+  /*transform: translateX(460px) ;*/
+  transition: 0.4s ease all;
+}
+.view-effect p { 
+  /*transform: translateX(460px) ;*/
+  transition: 0.4s ease all;
+}
+.view-effect a.info { 
+  /*transform: translateX(460px) ;*/
+  transition: 0.4s ease all;
+} 
+
+
+
+.view-effect:hover .mask { 
+  opacity:1; 
+  transition-delay: 0s;              
+  transform: translate(0px, 0px);
+}
+.view-effect:hover h2 { 
+  transform: translateY(0px); 
+}
+.view-effect:hover p { 
+  transform: translateX(0px) rotate(0deg);
+
+}
+.view-effect:hover a.info { 
+  transform: translateY(0px);
+
+}
