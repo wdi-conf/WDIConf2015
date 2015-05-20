@@ -8,12 +8,16 @@
             <p><%= f.label :email, :class =>'field' %></p>
             <p><%= f.text_field :email, :class =>'textbox-300'  %></p>
 
-<!--          commented out because user_role was moved to attendees table and don't know how to fix it. JLW.
+<!--         commented out because user_role was moved to attendees table and don't know how to fix it. JLW.
              <p><%#= f.label :user_role, :class =>'field' %></p>
              <p><#%= f.text_field :role, :class =>'textbox-300'  %></p>
 -->
              <p><%= f.label :bio, :class =>'field' %></p>
              <p><%= f.text_field :bio, :class =>'textbox-300'  %></p>
+             <p> 
+                <label for="">Upload File</label>
+                <%= f.file_field :photo %>
+             </p> 
 
              <p><%= f.submit :class =>'admin-btn'%></p>
          </fieldset>

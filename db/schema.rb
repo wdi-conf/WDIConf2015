@@ -35,6 +35,7 @@ ActiveRecord::Schema.define(version: 20150520015325) do
     t.string  "password_digest",                            null: false
     t.text    "bio"
     t.boolean "admin",                      default: false
+    t.string  "photo"
   end
 
 end
