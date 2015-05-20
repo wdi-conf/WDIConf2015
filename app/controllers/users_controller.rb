@@ -27,10 +27,11 @@ class UsersController < ApplicationController
 			if new_attendee.save
       	redirect_to user_path(@user.id), notice: "Woohoo! Your ticket has been booked!"
     	else
-    		redirect_to :back, alert: "Something went wrong! Please try again."
+    		redirect_to :back, notice: "Something went wrong! Please try again."
     	end
     else
-      render :new
+    	flash[:notice] = "Your account could not be created. Please try again."
+      render "events/show"
     end
 	end
 
@@ -44,10 +45,10 @@ class UsersController < ApplicationController
 
 			# couldn't save the user to this event for some reason
 			unless new_attendee.save
-	  		render :show, alert: "Something went wrong! Please try again."
+	  		render "events/show", notice: "Something went wrong! Please try again."
 	  	end
 	  end
-	  redirect_to user_path(current_user.id)
+	  redirect_to user_path(current_user.id), notice: "Woohoo! Your ticket has been booked!"
 	end
 
 end

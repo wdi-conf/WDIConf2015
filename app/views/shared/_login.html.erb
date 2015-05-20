@@ -1,0 +1,25 @@
+<!-- Login Modal -->
+<div class="modal-background" id="login-modal">
+	<div class="join-event-modal">
+		<div class="close-modal">X</div>
+		<h2>Log In</h2>
+
+		<%= form_tag login_path do %>
+
+		<div class="field">
+			<label for="email">Email</label>
+			<%= text_field_tag :email %>
+		</div>
+
+		<div class="field">
+			<label for="password">password</label>
+			<%= password_field_tag :password %>
+		</div>
+
+		<div class="actions">
+			<input type="submit" value="Log In">
+		</div>
+		<% end %>
+
+	</div>
+</div>
