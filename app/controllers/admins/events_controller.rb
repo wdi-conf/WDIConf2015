@@ -18,7 +18,18 @@ class Admins::EventsController < AdminsController
 
   def update
     @event = Event.find(params[:id])
-    if @event.update(event_params)
+    # set current speaker's role to 'user'
+    current_speaker = @event.attendees.find_by(user_id: params[:event][:attendee_id])
+    current_speaker.user_role = 'user'
+    current_speaker.save
+
+    # assign the role of 'speaker' to the selected attendee
+    new_speaker = @event.attendees.find_by(user_id: params[:event][:attendee_id])
+    new_speaker.user_role = 'speaker'
+    new_speaker.save
+
+    # binding.pry
+    if @event.update(event_params.slice!(:attendee_id)) # can't save attendee_id for event
       redirect_to '/admins/events'
     else
       render :edit
@@ -37,8 +48,8 @@ class Admins::EventsController < AdminsController
 
   private
 
-  def event_params
-    params.require(:event).permit(:title, :description, :date_time, :max_tix)
-  end
+    def event_params
+      params.require(:event).permit(:title, :description, :date_time, :max_tix, :attendee_id)
+    end
 
 end

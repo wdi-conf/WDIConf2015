@@ -1,23 +1,27 @@
  <%= form_for [:admins, @event] do |f| %>  <!--need :admins since namespaced-->
      <div class="admin">
         <fieldset>
-             <legend>event</legend>
-             <p><%= f.label :title, :class =>'admin-field' %></p>
-             <p><%= f.text_field :title, :class =>'textbox-300' %></p>
+            <legend>event</legend>
+            <p><%= f.label :title, :class =>'admin-field' %></p>
+            <p><%= f.text_field :title, :class =>'textbox-300' %></p>
 
-             <p><%= f.label :description, :class =>'admin-field' %></p>
-             <p><%= f.text_field :description, :class =>'textbox-300' %></p>
+            <p><%= f.label :description, :class =>'admin-field' %></p>
+            <p><%= f.text_field :description, :class =>'textbox-300' %></p>
 
-             <p><%= f.label :date_time, :class =>'admin-field' %></p>
-             <p><%= f.datetime_local_field :date_time, :class =>'textbox-300' %></p>     <!--can't call this datetime_field because it is a helper??-->
+            <p><%= f.label :date_time, :class =>'admin-field' %></p>
+            <p><%= f.datetime_local_field :date_time, :class =>'textbox-300' %></p>     <!--can't call this datetime_field because it is a helper??-->
 
-             <p><%= f.label "Speaker", :class =>'admin-field' %></p>
-             <p><%= f.collection_select(:id,@event.users,:id,:name) %></p>
+            <p><%= f.label "Speaker", :class =>'admin-field' %></p>
+            <p><%= f.collection_select(:attendee_id,@event.users,:id,:name) %></p>
+                                       <!-- id for the select tag -->
+                                           <!-- data collection for the list -->
+                                                        <!-- option tag value -->
+                                                            <!-- option tag text -->
 
-             <p><%= f.label :max_tix, :class =>'admin-field' %></p>
-             <p><%= f.text_field :max_tix, :class =>'textbox-300' %></p>
+            <p><%= f.label :max_tix, :class =>'admin-field' %></p>
+            <p><%= f.text_field :max_tix, :class =>'textbox-300' %></p>
 
-             <p><%= f.submit :class =>'admin-btn' %></p>
+            <p><%= f.submit :class =>'admin-btn' %></p>
          </fieldset>
      </div>
  <% end %>
