@@ -1,0 +1,35 @@
+/*-----------------------------------*/
+/* Schedule Page                     */
+/*-----------------------------------*/
+
+
+.page-title {
+  font-family: 'Raleway';
+  color: #e74c3c;
+  font-size: 40px;
+  margin-left: 4em;
+}
+
+
+/* BOOK NOW BUTTON STYLING*/
+  .btnBookNow {
+   border: 1px solid #3185FC;
+   background: #3185FC;
+   padding: 4px 8px;
+   font-size: 11px;
+   font-family: 'Roboto Condensed', Arial, Sans-Serif;
+   text-decoration: none;
+   vertical-align: middle;
+   border-bottom-right-radius: 20px;
+   }
+  .btnBookNow a {
+    color: white;
+    text-decoration: none;
+  }
+  .btnBookNow:hover {
+   background: #white;
+   color: #0266C8;
+   }
+  .btnBookNow:active {
+   background: #1b435e;
+   }

@@ -1,7 +1,7 @@
-/*.event {
-	margin: 0 30px 50px;
+.event .default-container h1 {
+  color: white;
 }
-*/
+
 .speaker {
 	float: right;
 	text-align: center;
@@ -22,15 +22,6 @@
 }
 
 
-/* Apply a natural box layout model to all elements, but allowing components to change */
-html {
-  box-sizing: border-box;
-}
-*, *:before, *:after {
-  box-sizing: inherit;
-}
-
-
 /*----------------------------------*/
 /* Clearfix for floats              */
 /*----------------------------------*/
@@ -45,7 +36,6 @@ html {
 .cf {
    zoom:1; /* For IE 6/7 (trigger hasLayout) */
 }
-
 
 
 /*-----------------------------------*/

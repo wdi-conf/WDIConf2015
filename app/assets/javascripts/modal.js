@@ -1,10 +1,13 @@
 $(document).ready(function() {
 
-	$('.show-modal').click(function() {
-		$('.modal-background').show();
+	$('.join-event-modal').click(function() {
+		var event_id = $(this).data("event-id");
+		$('#user_event_id').val(event_id)
+		$('#join-event-modal').show();
+
 	});
 
-	$('.close-modal').on('click', function(e) {
+	$('.close-modal').on('click', function() {
 		$('.modal-background').hide();
 	});
 
