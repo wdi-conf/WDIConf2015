@@ -39,12 +39,11 @@ nav ul{
   padding: 0;
 }
 
-nav ul a li{
+nav ul li{
   width: 100%;
-  margin-bottom: 50px;
-  height: 4vh;
+  margin-bottom: 20px;
   line-height: 4vh;
-  padding-right: 1em;
+  padding: 0.6em 1em 0.6em 0;
 }
 
 nav ul a{
@@ -54,7 +53,7 @@ nav ul a{
   text-decoration: none;
 }
 
-nav ul a li:hover{
+nav ul li:hover{
   transition: 0.2s ease all;
   background-color: #e74c3c;
   color: white;
@@ -63,6 +62,7 @@ nav ul a li:hover{
 nav .fa{
   font-size: 24px;
   padding-left: 15px;
+  vertical-align: sub;
 }
 
 nav .fa-bars{
@@ -86,9 +86,14 @@ nav ul{
   list-style-type: none;
 }
 
-.logged-in{
-  width: 100%;
+.logged-in {
   text-align: center;
+}
+
+.logged-in a {
+  display: block;
+  margin-top: 50px;
+  margin-bottom: 15px;
 }
 
 .off-white{
@@ -112,6 +117,11 @@ nav ul{
   align-items: center;
 }
 
+
+.notice {
+  display: block;
+  text-align: center;
+}
 
 
 /*---END OF LAYOUT STYLES---*/
