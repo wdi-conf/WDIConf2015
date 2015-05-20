@@ -14,10 +14,6 @@ class Attendee < ActiveRecord::Base
 
   def attendee_list(event)
      attendees.where(event_id: @event)
-
-
-
-
   end
 
 end
