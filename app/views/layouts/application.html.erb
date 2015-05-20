@@ -19,32 +19,41 @@
       <a data-scroll href="#home"><li>Home <i class="fa fa-home"></i></li></a>
       <a data-scroll href="#speakers"><li>Speakers <i class="fa fa-bullhorn"></i></li></a>
       <a data-scroll href="#about"><li>About <i class="fa fa-info-circle"></i></li></a>
-      <a href="/events"><li>Schedule <i class="fa fa-calendar"></i></li></a>
+      <a data-scroll href="#schedule"><li>Schedule <i class="fa fa-calendar"></i></li></a>
       <a data-scroll href="#contact"><li>Contact <i class="fa fa-envelope"></i></li></a>
-      <a href="#sponsors"><li>Sponsors <i class="fa fa-smile-o"></i></li></a>
-      <a href="#team"><li>The Team <i class="fa fa-users"></i></li></a>
+      <a data-scroll href="#sponsors"><li>Sponsors <i class="fa fa-smile-o"></i></li></a>
+      <a data-scroll href="#team"><li>The Team <i class="fa fa-users"></i></li></a>
 
       <!-- start of login -->
-      <li>
-        <div class="logged-in">
-          <% if logged_in? %>
-            <a href="#"><%= current_user.name %></a>
-            <%= form_tag '/logout', :method => :delete do %>
-              <button>Logout</button>
-            <% end %>
-          <% else %>
-            <%= link_to('Login', login_path) %>
-            <a href="/login"><i class="fa fa-sign-in"></i></a>
-          <% end %>
-
-         <% #if logged_in? && current_user.role == "speaker" %>
-         <!-- <a href="#">View Profile</a> -->
-         <% #end %>
-       </div>
-       <!-- end of login  -->
-     </li>
+      <% if logged_in? %>
+      <div class="logged-in">
+        <%= link_to current_user.name, user_path(current_user.id) %>
+        <%= form_tag '/logout', :method => :delete do %>
+          <button>Logout</button>
+        <% end %>
+      </div>
+      <% else %>
+        <a href="#login" class="login-modal"><li>Login<i class="fa fa-sign-in"></i></li></a>
+      <% end %>
+      <!-- end of login  -->
    </ul>
  </nav>
+
+
+  <!-- Display any errors (in a popup) -->
+  <% if flash[:notice] %>
+    <div class="modal-background notice" id="join-event-modal">
+      <div class="modal">
+        <div class="close-modal">X</div>
+        <%= flash[:notice] %>
+      </div>
+    </div>
+  <% end %>
+  <!-- end errors section -->
+
+  <!-- Display login popup when needed-->
+  <%= render 'shared/login' %>
+  <!-- end login popup -->
 
  <%= yield %>
 

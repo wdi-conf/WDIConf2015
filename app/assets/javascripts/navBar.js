@@ -18,12 +18,3 @@ var bio = document.getElementsByClassName('bio');
 
 });
 
-
-
-
-// FOR BOUNCING ARROW ON HOMEPAGE LOAD
-
-// window.setInterval(function bounceArrow(){
-// $( "#bounce-arrow" ).effect( "bounce", { times: 3 }, "slow" );
-// }, 5000);
-

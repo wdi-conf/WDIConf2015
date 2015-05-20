@@ -1,2 +1,43 @@
 <div id="schedule">
+	<p class="page-title">Events Schedule</p>
+	<link href='//fonts.googleapis.com/css?family=Roboto+Condensed' rel='stylesheet' type='text/css'>
+
+	<div class="button-group filters-button-group">
+		<button class="button" data-filter="front">Frontend</button>
+		<button class="button" data-filter="back">Backend</button>
+	</div>
+
+
+	<div class="grid-isotope">
+		<% @events.each do |event| %>
+		<div class="element-item" data-category="transition">
+			<h3 class= "events-title"><%= event.title %></h3>
+			<p class= "events-description"><%= event.description %></p>
+			<h4 class= "events-speaker"><%= event.speaker.name %></h4>
+			<p class= "events-time"><%= event.date_time.to_s[11,5] %></p>
+			<p></p>
+			<% if logged_in? %>
+				<button class="btnBookNow">
+					<%= link_to 'Attend', "/events/#{event.id}/join", method: :post %>
+				</button>
+			<% else %>
+				<button class="btnBookNow join-event-modal" data-event-id="<%= event.id %>">BOOK NOW</button>
+			<% end %>
+		</div>
+		<% end %>
+	</div>
+
+
+
+	<script src="//cdnjs.cloudflare.com/ajax/libs/jquery.isotope/2.2.0/isotope.pkgd.min.js"></script>
+
+	<script>
+	$( function() {
+    // init Isotope
+    var $grid = $('.grid-isotope').isotope({
+    	itemSelector: '.element-item',
+    	layoutMode: 'fitRows'
+    });
+  });
+	</script>
 </div>
