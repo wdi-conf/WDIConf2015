@@ -1,6 +1,7 @@
 class Event < ActiveRecord::Base
 	has_many :attendees
 	has_many :users, through: :attendees
+	validates :title, :description, :date_time, :max_tix ,presence: true
 
 
 	def speaker
@@ -21,3 +22,4 @@ class Event < ActiveRecord::Base
 		self.attendees.find_by(user_role: 'speaker').user_id
 	end
 end
+
