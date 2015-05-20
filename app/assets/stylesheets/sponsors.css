@@ -1,10 +1,4 @@
 
-#sponsor-container {
-  height: 100%;
-  width: 90%;
-  margin: 0 auto;
-  padding-left: 5%;
-}
 
 #sponsor-heading {
   width: 80%;
@@ -23,11 +17,9 @@
 .sponsor-view {
     display: inline-block;
     width: 20%;
-    height: 250px;
-    margin: 1%;
-    
-    float: left;
-
+    height: 100%;
+    margin-left: 1%;
+    margin-right: 1%;
     overflow: hidden;
     position: relative;
     text-align: center;
@@ -37,15 +29,14 @@
 
 }
 .sponsor-view .mask, .sponsor-view .content {
-    width: 250px;
-    height: 250px;
+    width: 100%;
+    height: inherit;
     position: absolute;
     overflow: hidden;
     top: 0;
     left: 0
 }
 .sponsor-view img {
-    display: block;
     width: 100%;
     position: relative
 }
@@ -83,6 +74,10 @@
     box-shadow: 0 0 5px #000
 }
 
+.sponsors-wrapper{
+  margin: auto;
+}
+
 
 .view-effect img {   
   transition: all 0.2s ease-in; 
@@ -90,19 +85,19 @@
 .view-effect .mask { 
   background-color: rgba(0,0,0,0.8);
   opacity: 0;
-  /*transform: translateX(460px) ;*/
+
   transition: 0.4s ease all;
 }
 .view-effect h2{
-  /*transform: translateX(460px) ;*/
+
   transition: 0.4s ease all;
 }
 .view-effect p { 
-  /*transform: translateX(460px) ;*/
+
   transition: 0.4s ease all;
 }
 .view-effect a.info { 
-  /*transform: translateX(460px) ;*/
+
   transition: 0.4s ease all;
 } 
 

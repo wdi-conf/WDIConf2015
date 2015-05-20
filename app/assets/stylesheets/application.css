@@ -14,6 +14,9 @@
  *= require_self
  */
 
+html{
+
+}
 
 html, body{
   height: 100%;
@@ -21,7 +24,9 @@ html, body{
   margin: 0;
   font-family: raleway;
   background: linear-gradient(135deg, rgba(0,0,0,0) 50%, rgba(0,0,0,0.5) 50%) fixed;
-
+/*  -webkit-transform: translate3d(0, 0, 0);
+  -webkit-backface-visibility: hidden;
+  -webkit-perspective: 1000;*/
 
 }
 
@@ -144,6 +149,7 @@ nav ul{
 .default-container{
   width: 70%;
   margin: auto;
+  padding-left: 75px;
 }
 
 .home img{
