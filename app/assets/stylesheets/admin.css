@@ -5,6 +5,7 @@
     border: 2px;
     border-color: black;
     border-style: solid;
+    text-align: center;
 }
 .admin fieldset legend {
     font-size: 20px;
@@ -45,6 +46,7 @@ input.textbox-300 {
     border-width: 1px;
     border-color: #686767;
     border-collapse: collapse;
+    text-align: center;
 }
 .admin th {
     font-size:12px;
@@ -74,4 +76,5 @@ input.textbox-300 {
 .admin-pages {
     width: 90%;
     margin: 0 auto;
+    text-align: center;
 }

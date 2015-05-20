@@ -24,7 +24,8 @@ Rails.application.routes.draw do
 
   # namespaces the admin to /admin/* paths
   namespace :admins do
-    resources :events, :users, :attendees
+    resources :events, :users
+    resources :attendees #, :except => [:edit]
     # resources :pages, :only => [:show]
     get '/' => 'pages#show'        # this is not root. This is /admins
   end
