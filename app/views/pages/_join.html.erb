@@ -1,0 +1,41 @@
+<!-- Join Event Modal -->
+			<div class="modal-background" id="join-event-modal">
+				<div class="modal">
+					<div class="close-modal">X</div>
+					<h2>Join Event</h2>
+
+					<%= form_for(@user) do |f| %>
+
+					<% if @user.errors.any? %>
+					<ul>
+						<% @user.errors.full_messages.each do |message| %>
+						<li><%= message %></li>
+						<% end %>
+					</ul>
+					<% end %>
+
+					<!-- Hidden field stores in the event id -->
+					<%= f.hidden_field :event_id, value: "" %>
+
+					<div class="field">
+						<%= f.label :name %>
+						<%= f.text_field :name %>
+					</div>
+
+					<div class="field">
+						<%= f.label :email %>
+						<%= f.text_field :email %>
+					</div>
+
+					<div class="field">
+						<%= f.label :password %>
+						<%= f.password_field :password %>
+					</div>
+
+					<div class="actions">
+						<%= f.submit %>
+					</div>
+					<% end %>
+
+				</div>
+			</div>
