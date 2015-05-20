@@ -3,5 +3,8 @@ class User < ActiveRecord::Base
 	has_many :attendees
 	has_many :events, through: :attendees
 	validates :email, uniqueness: true
-	validates :name, :email, :password, presence: true
+	validates :name, :email, presence: true
+  
+  validates :password, presence: true, :on => :create
+  mount_uploader :photo, PhotoUploader
 end
