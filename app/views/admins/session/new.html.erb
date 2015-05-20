@@ -1,0 +1,44 @@
+<h1>Admin Login</h1>
+
+<%= form_tag '/login', :method => :post do %>
+
+    <label for="">Email</label>
+    <%= text_field_tag :email %><br>
+    <!-- <input type="text" name="email"> -->
+    <label for="">Password</label>
+    <input type="password" name="password">
+    <button>Login</button>
+ <% end %>
+
+
+<!-- start of login -->
+<% if logged_in? %>
+    <div class="logged-in">
+      <%= link_to current_user.name, user_path(current_user.id) %>
+      <%= form_tag '/logout', :method => :delete do %>
+          <button>Logout</button>
+      <% end %>
+    </div>
+<% else %>
+    <a href="#login" class="login-modal"><li>Login<i class="fa fa-sign-in"></i></li></a>
+<% end %>
+<!-- end of login  -->
+</ul>
+</nav>
+
+
+<!-- Display any errors (in a popup) -->
+<% if flash[:notice] %>
+    <div class="modal-background notice" id="join-event-modal">
+      <div class="modal">
+        <div class="close-modal">X</div>
+        <%= flash[:notice] %>
+      </div>
+    </div>
+<% end %>
+<!-- end errors section -->
+
+<!-- Display login popup when needed-->
+<%= render 'shared/login' %>
+<!-- end login popup -->
+
