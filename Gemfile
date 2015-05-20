@@ -35,6 +35,9 @@ gem 'pg'
 # code climate static code quality analysis. This allows test coverage %
 gem "codeclimate-test-reporter", group: :test, require: nil
 
+# CarrierWave for file uploads
+gem 'carrierwave'
+
 group :development, :test do
   # Required by Windows devs
   # allows time zone data to be accessed on windows
