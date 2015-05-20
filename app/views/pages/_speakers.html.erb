@@ -8,9 +8,11 @@
 
   <% all_speakers.each do |speaker| %>
       <div data-sr class="speaker-listing" id="speaker">
+        <p class="bio hor-allign hidden">
+          <%= speaker.bio %>
+        </p>
         <%= image_tag('dom.jpg', :class => "speaker_img")%>
         <span class="name"><strong><%= speaker.name %></strong></span>
-          <%= speaker.bio %>
       </div>
     <% end %>
   </div>
