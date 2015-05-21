@@ -1,6 +1,9 @@
 Rails.application.configure do
   # Settings specified here will take precedence over those in config/application.rb.
 
+  #config for cloudinary not sure if this is right so commenting out.Doesn't have config in front of it.
+  CLOUDINARY_URL=cloudinary://897121633998444:jYob1foJAv70DxsxDVBUlSYdtOI@hhtnuuubg
+
   # Code is not reloaded between requests.
   config.cache_classes = true
 
