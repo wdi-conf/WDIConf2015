@@ -1,4 +1,5 @@
 class Admins::UsersController < AdminsController
+  before_action :check_if_admin
 
   def create
     @user = User.new(user_params)

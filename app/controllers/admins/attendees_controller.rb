@@ -1,4 +1,5 @@
 class Admins::AttendeesController < AdminsController
+  before_action :check_if_admin
 
   def create
     @attendee = Attendee.new(attendee_params)
