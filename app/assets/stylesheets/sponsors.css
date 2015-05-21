@@ -65,10 +65,9 @@
     display: inline-block;
     text-decoration: none;
     padding: 7px 14px;
-    background: #e74c3c;
     color: #fff;
     text-transform: uppercase;
-    box-shadow: 0 0 1px #000
+    /*box-shadow: 0 0 1px #000*/
 }
 .sponsor-view a.info:hover {
     /*box-shadow: 0 0 5px #000*/

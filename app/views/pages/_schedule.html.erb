@@ -8,13 +8,13 @@
 		<% @events.each do |event| %>
       <div data-sr="reset" class="event-listing">
           <div class="listing-banner">
-            <span class="listing-name"><strong><%= event.speaker.name %></strong></span>
+            <span class="listing-name"><strong><%= event.title %></strong></span>
 					 <span class="listing-time"><%= event.date_time.to_s[11,5] %></span>
           </div>
 
           <div class="listing-details hor-allign">
           <%= image_tag('placeholder.gif', :class=> "blank")%>
-          <span class="listing-title"><%= event.title %></span>
+          <span class="listing-title"><%= event.speaker.name %></span>
           <p><%= event.description %></p>
       <% if logged_in? %>
 				<button class="btnBookNow-sq">
