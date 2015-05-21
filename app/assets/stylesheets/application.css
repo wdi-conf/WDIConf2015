@@ -146,6 +146,12 @@ nav ul{
   background-color: rgba(235,235,235,0.9);
 }
 
+.white-page-small{
+  width: 100%;
+  min-height: 60%;
+  background-color: rgba(235,235,235,0.9);
+}
+
 .default-container{
   width: 70%;
   margin: auto;
