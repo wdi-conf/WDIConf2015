@@ -11,11 +11,11 @@
             <p><%= f.label :date_time, :class =>'admin-field' %></p>
             <p><%= f.datetime_local_field :date_time, :class =>'textbox-300' %></p>     <!--can't call this datetime_field because it is a helper??-->
 
-            <p><%= f.label "Speaker", :class =>'admin-field' %></p>
-            <p><%= f.collection_select(:new_speaker_id,@event.users,:id,:name) %></p>
-
             <p><%= f.label :max_tix, :class =>'admin-field' %></p>
             <p><%= f.text_field :max_tix, :class =>'textbox-300' %></p>
+
+            <p><%= f.label "Speaker", :class =>'admin-field' %></p>
+            <p><%= f.collection_select(:new_speaker_id,@user_list,:id,:name) %></p>
 
             <p><%= f.submit :class =>'admin-btn' %></p>
          </fieldset>
