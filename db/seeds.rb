@@ -1,4 +1,3 @@
-
 Event.destroy_all
 User.destroy_all
 Attendee.destroy_all
@@ -20,9 +19,8 @@ Event.create(id: 14, title: 'What’s Yours is MineCraft', max_tix: 50, date_tim
 Event.create(id: 15, title: 'GFMUH', max_tix: 50, date_time: Time.zone.local(2015,05,22,17,00,0), description: "GFMUH, pronounced gif-muh. It's not that hard.")
 Event.create(id: 16, title: 'The Computer and the Chair', max_tix: 50, date_time: Time.zone.local(2015,05,22,17,30,0), description: "The Problem Exists Between the Computer and the Chair. Stories from the Developer in residence.")
 
-
-User.create(id: 1, name: 'Matt Cameron', email: 'mattlbcameron@gmail.com', password: 'password', bio: "Matt’s own company, Beardo, has taken shopping online for fake beards to a whole new level. Remember when fake beards were itchy? Me too. But now you can buy the Rolls Royce of fake beards through his online portal. Matt will share his secrets in a talk on micro-niche marketing called “Shut Up and Take My Money!” Entrepreneurs take note!", admin: false,)
-User.create(id: 2, name: 'Dom White', email: 'domwhite@gmail.com', password: 'password', bio: "Dominic has researched extensively for the world-premiere of his talk ‘GitHub and PornHub: A Compare and Contrast Conversation. Aiming to demystify the world of GitHub users as angry, code obsessed loners by comparing them with the angry, porn obsessed loners that use PornHub, Dominic’s talk will brush away such easy stereotypes and shed light on these often-maligned corners of the internet. ", admin: false, )
+User.create(id: 1, name: 'Matt Cameron', email: 'mattlbcameron@gmail.com', password: 'password', bio: "Matt’s own company, Beardo, has taken shopping online for fake beards to a whole new level. Remember when fake beards were itchy? Me too. But now you can buy the Rolls Royce of fake beards through his online portal. Matt will share his secrets in a talk on micro-niche marketing called “Shut Up and Take My Money!” Entrepreneurs take note!", admin: false)
+User.create(id: 2, name: 'Dom White', email: 'domwhite@gmail.com', password: 'password', bio: "Dominic has researched extensively for the world-premiere of his talk ‘GitHub and PornHub: A Compare and Contrast Conversation. Aiming to demystify the world of GitHub users as angry, code obsessed loners by comparing them with the angry, porn obsessed loners that use PornHub, Dominic’s talk will brush away such easy stereotypes and shed light on these often-maligned corners of the internet. ", admin: false)
 User.create(id: 3, name: 'Mike Goodwin', email: 'mike@gmail.com', password: 'password', bio: "Mike is a man of many digital talents. Currently employed at General Assembly as the procurer of donuts for unforgiving and ungrateful junior developers, Mike often wonders how these people found their way out of their server caves. Mike will be presenting his app Donutfindr for deployment upon graduation of said developers, which allows users to find their own damn donuts whilst simultaneously removing any association Mike has with the users from social media.", admin: false)
 User.create(id: 4, name: 'Jeff Wolff', email: 'jeff@gmail.com', password: 'password', bio: "Jeff “The Wolffman” Wolff is an expert at databases and tables. Not necessarily at the same time. ‘Table-flipping: A Database Hate Story’ bring the emoticon to the stage. Jeff will discuss the creation, techniques and destruction of tables, both tangible and intangible. Balsa wood for table construction provided by the good folks of WDI Conf 2015, but if you destroy it, clean it up yo damn self.", admin: false)
 User.create(id: 5, name: 'Luke Shillabeer', email: 'luke@gmail.com', password: 'password', bio: "Luke has traversed the digital jungle so you don’t have to. Luke’s talk; ‘From Code Monkey to Code Gorilla. Channelling the Alpha Nerd Within’. Aimed at junior developers who have been picked on for their code, Luke aims to guide you through these tough times with wit and insight. Performance enhancing substances not included.", admin: false)
@@ -295,6 +293,21 @@ Attendee.create(user_id: 13, event_id: 16, user_role: 'user')
 Attendee.create(user_id: 14, event_id: 16, user_role: 'user')
 Attendee.create(user_id: 15, event_id: 16, user_role: 'user')
 Attendee.create(user_id: 16, event_id: 16, user_role: 'speaker')
+
+uploader = PhotoUploader.new
+# photo_file_name = %w{aden, beta, dom, dt, jarod, jaya, jc, jeff, justin, louis, luke, matt, matts, mike, nick, phil}
+# Seeds photos from file structure to something Carrierwave should be able to use
+names = {'matt' => 'Matt Cameron', 'dom' => 'Dom White', 'mike' => 'Mike Goodwin', 'jeff' => 'Jeff Wolff', 'luke' => 'Luke Shillabeer', 'justin' => 'Justin Ward', 'nick' => 'Nick Pateman', 'aden' => 'Aden Margheriti', 'jaya' => 'Jaya Wijono', 'beta' => 'Beta Ngadiman', 'phil' => 'Phillip Castiglione', 'jarod' => "Jarod O'loughlan", 'jc' => 'JC Lee', 'louis' => 'Louis Moore', 'dt' => 'Daniel Tsui', 'Matt' => 'Matt Swann' }
+names.each do |photo_name, full_name|
+  user = User.find_by(name: full_name)
+  file_name = "./db/photos/" + photo_name + ".jpg"
+  the_file = File.open file_name
+  unless user == nil # one of the key value pairs must not be returning the correct record because one is nil.
+    user.photo = the_file
+  end
+  #uploader.store!(the_file) # todo currently breaks so commented out
+end
+
 
 
 
