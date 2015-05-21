@@ -294,14 +294,20 @@ Attendee.create(user_id: 14, event_id: 16, user_role: 'user')
 Attendee.create(user_id: 15, event_id: 16, user_role: 'user')
 Attendee.create(user_id: 16, event_id: 16, user_role: 'speaker')
 
+uploader = PhotoUploader.new
 # photo_file_name = %w{aden, beta, dom, dt, jarod, jaya, jc, jeff, justin, louis, luke, matt, matts, mike, nick, phil}
 # Seeds photos from file structure to something Carrierwave should be able to use
 names = {'matt' => 'Matt Cameron', 'dom' => 'Dom White', 'mike' => 'Mike Goodwin', 'jeff' => 'Jeff Wolff', 'luke' => 'Luke Shillabeer', 'justin' => 'Justin Ward', 'nick' => 'Nick Pateman', 'aden' => 'Aden Margheriti', 'jaya' => 'Jaya Wijono', 'beta' => 'Beta Ngadiman', 'phil' => 'Phillip Castiglione', 'jarod' => "Jarod O'loughlan", 'jc' => 'JC Lee', 'louis' => 'Louis Moore', 'dt' => 'Daniel Tsui', 'Matt' => 'Matt Swann' }
 names.each do |photo_name, full_name|
   user = User.find_by(name: full_name)
   file_name = "./db/photos/" + photo_name + ".jpg"
-  user.photo = File.open file_name
+  the_file = File.open file_name
+  unless user == nil # one of the key value pairs must not be returning the correct record because one is nil.
+    user.photo = the_file
+  end
+  #uploader.store!(the_file) # todo currently breaks so commented out
 end
+
 
 
 
