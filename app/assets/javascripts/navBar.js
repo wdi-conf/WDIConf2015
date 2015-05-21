@@ -16,5 +16,20 @@ var bio = document.getElementsByClassName('bio');
       }
     });
 
+document.getElementById('nav-toggle').addEventListener('click', function mobileNav(){
+
+  nav = document.getElementById('navbar');
+  navToggler = document.getElementById('nav-toggle');
+  if(nav.classList.contains('default')){
+    nav.classList.remove('default');
+    nav.classList.add('nav-expand');
+    navToggler.classList.add('nav-toggle-slide');
+
+  } else if(nav.classList.contains('nav-expand')){
+    nav.classList.remove('nav-expand');
+    nav.classList.add('default');
+    navToggler.classList.remove('nav-toggle-slide');
+  }
+});
 });
 

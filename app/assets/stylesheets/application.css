@@ -24,9 +24,9 @@ html, body{
   margin: 0;
   font-family: raleway;
   background: linear-gradient(135deg, rgba(0,0,0,0) 50%, rgba(0,0,0,0.5) 50%) fixed;
-  -webkit-transform: translate3d(0, 0, 0);
+/*  -webkit-transform: translate3d(0, 0, 0);
   -webkit-backface-visibility: hidden;
-  -webkit-perspective: 1000;
+  -webkit-perspective: 1000;*/
 
 }
 
@@ -39,6 +39,7 @@ nav{
   width: 150px;
   text-transform: uppercase;
   overflow: hidden;
+  z-index: 1;
 }
 nav ul{
   padding: 0;
@@ -71,8 +72,11 @@ nav .fa{
 }
 
 nav .fa-bars{
-  /*color: #e74c3c;*/
   font-size: 30px;
+}
+
+.nav-toggle{
+  display: none;
 }
 
 
@@ -321,6 +325,27 @@ hr{
       width: 100%;
     }
 
+    .default{
+      margin-left: -150px;
+    }
+
+    .nav-toggle{
+      display: inline-block;
+      position: fixed;
+      top: 0;
+      left: 0;
+      font-size: 2em;
+      color: white;
+      font-size: 3em;
+    }
+    .nav-toggle-slide{
+  transform: translateX(150px);
+  transition: 0.3s ease all;
+  }
+    nav .fa-bars{
+      display: none;
+    }
+
     p{
     }
 
@@ -337,7 +362,7 @@ hr{
 
 
   .default-container{
-    /*padding-left: 50px;*/
+    padding-left: 0px;
   }
 
   .speaker-listing .name{
