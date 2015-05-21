@@ -4,24 +4,25 @@
 
 	<div class="grid-schedule">
 		<% @events.each do |event| %>
-		    <div class="ih-item square effect3 bottom_to_top"><a href="#">
-        <div class="img"><!-- <img src="http://lorempixel.com/output/abstract-h-c-383-433-7.jpg" alt="img"> -->
-					<h3 class="sq-title"><%= event.title %></h3>
-					<h4 class="sq-speaker"><%= event.speaker.name %></h4>
-					<p class="sq-desc"><%= event.description %></p>
-					<p class="sq-time"><%= event.date_time.to_s[11,5] %></p>
-        </div>
-        <div class="info">
-      <% if logged_in? %>
-				<button class="btnBookNow-sq">
-					<%= link_to 'Attend', "/events/#{event.id}/join", method: :post %>
-				</button>
-			<% else %>
+		<div class="ih-item square effect3 bottom_to_top">
+			<div class="img"><!-- <img src="http://lorempixel.com/output/abstract-h-c-383-433-7.jpg" alt="img"> -->
+				<h3 class="sq-title"><%= event.title %></h3>
+				<h4 class="sq-speaker"><%= event.speaker.name %></h4>
+				<p class="sq-desc"><%= event.description %></p>
+				<p class="sq-time"><%= event.date_time.to_s[11,5] %></p>
+			</div>
+			<div class="info">
+				<% if logged_in? %>
+					<%= link_to "/events/#{event.id}/join", method: :post do %>
+					<button class="btnBookNow-sq">Attend</button>
+				<% end %>
+				<% else %>
 				<button class="btnBookNow-sq join-event-modal" data-event-id="<%= event.id %>">BOOK</button>
-			<% end %>
-        </div></a></div>
-     <% end %>
-    </div> 
+				<% end %>
+			</div>
+		</div>
+		<% end %>
+	</div>
 
 
 

@@ -1,4 +1,4 @@
-.grid-schedule { 
+.grid-schedule {
   margin: 0 auto;
   display: inline-block;
   width: 80%%;
@@ -31,7 +31,7 @@
   text-align: center;
   text-decoration: none;
 }
-.ih-item a:hover {
+.ih-item:hover {
   text-decoration: none;
 }
 .ih-item img {
@@ -100,7 +100,7 @@
   padding: 5px;
   text-align: center;
 }
-.ih-item.square.effect3 a:hover .info {
+.ih-item.square.effect3:hover .info {
   visibility: visible;
   opacity: 1;
 }
@@ -113,14 +113,14 @@
   -o-transform: translateY(100%);
   transform: translateY(100%);
 }
-.ih-item.square.effect3.bottom_to_top a:hover .img {
+.ih-item.square.effect3.bottom_to_top:hover .img {
   -webkit-transform: translateY(-50px);
   -moz-transform: translateY(-50px);
   -ms-transform: translateY(-50px);
   -o-transform: translateY(-50px);
   transform: translateY(-50px);
 }
-.ih-item.square.effect3.bottom_to_top a:hover .info {
+.ih-item.square.effect3.bottom_to_top:hover .info {
   -webkit-transform: translateY(0);
   -moz-transform: translateY(0);
   -ms-transform: translateY(0);
@@ -145,7 +145,8 @@
     bottom: 0px;
     font-size: 20px;
     color: white;
-    border-shadow: ;
+    cursor: pointer;
+
    }
   .btnBookNow-sq a {
     color: white;
