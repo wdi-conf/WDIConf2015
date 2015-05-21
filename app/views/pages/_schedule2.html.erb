@@ -1,0 +1,59 @@
+<div class`="schedule white-page hor-allign">
+  <div class="default-container">
+    <div class="hor-wrapper">
+  <p class="page-title">Events Schedule</p>
+  <link href='//fonts.googleapis.com/css?family=Roboto+Condensed' rel='stylesheet' type='text/css'>
+
+    <% @events.each do |event| %>
+        <div class="ih-item square effect3 bottom_to_top"><a href="#">
+        <div class="img"><!-- <img src="http://lorempixel.com/output/abstract-h-c-383-433-7.jpg" alt="img"> -->
+          <h3 class="sq-title"><strong><%= event.title %></strong>
+          <h4 class="sq-speaker"><%= event.speaker.name %></h4>
+          <p class="sq-desc"><%= event.description %></p>
+          <p class="sq-time"><%= event.date_time.to_s[11,5] %></p>
+        </div>
+        <div class="info">
+      <% if logged_in? %>
+        <button class="btnBookNow-sq">
+          <%= link_to 'Attend', "/events/#{event.id}/join", method: :post %>
+        </button>
+      <% else %>
+        <button class="btnBookNow-sq join-event-modal" data-event-id="<%= event.id %>">BOOK</button>
+      <% end %>
+        </div></a></div>
+     <% end %>
+    </div> 
+  </div>
+</div>
+
+
+
+
+
+
+
+<!-- blank -->
+
+
+    <% @events.each do |event| %>
+      <div class="event-listing">
+          <%= event.speaker.name %>
+          <%= event.date_time.to_s[11,5] %>
+          <%= image_tag('placeholder.gif', :class=> "blank")%>
+          <%= event.title %>
+          <%= event.description %>
+      <% if logged_in? %>
+        <button class="btnBookNow-sq">
+          <%= link_to 'Attend', "/events/#{event.id}/join", method: :post %>
+        </button>
+      <% else %>
+        <button class="btnBookNow-sq join-event-modal" data-event-id="<%= event.id %>">BOOK</button>
+      <% end %>
+      </div>
+      </div>
+     <% end %>
+
+
+
+
+
