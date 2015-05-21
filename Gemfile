@@ -65,5 +65,6 @@ end
 group :production do
   # gem below required for Heroku deployment
   gem 'rails_12factor'
+  gem 'cloudinary'
 end
 
