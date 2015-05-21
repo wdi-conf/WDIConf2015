@@ -1,0 +1,19 @@
+---
+development:
+  cloud_name: hhtnuuubg
+  api_key: '897121633998444'
+  api_secret: jYob1foJAv70DxsxDVBUlSYdtOI
+  enhance_image_tag: true
+  static_image_support: false
+production:
+  cloud_name: hhtnuuubg
+  api_key: '897121633998444'
+  api_secret: jYob1foJAv70DxsxDVBUlSYdtOI
+  enhance_image_tag: true
+  static_image_support: true
+test:
+  cloud_name: hhtnuuubg
+  api_key: '897121633998444'
+  api_secret: jYob1foJAv70DxsxDVBUlSYdtOI
+  enhance_image_tag: true
+  static_image_support: false
