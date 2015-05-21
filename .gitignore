@@ -17,4 +17,5 @@ config/database.yml
 
 *.xml
 .idea/
+*.DS_Store
 
