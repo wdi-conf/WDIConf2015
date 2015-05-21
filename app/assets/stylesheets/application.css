@@ -321,20 +321,6 @@ hr{
   transition: 0.3s ease all;
 }
 
-/*---ABOUT PAGE---*/
-.about-title{
-  display: block;
-  text-align: center;
-  font-size: 50px;
-  color: #e74c3c;
-}
-
-.about p{
-  text-align: center;
-  font-size: 24px;
-}
-
-
 /*---SPONSORS---*/
   .sponsors-title{
       display: block;
@@ -365,7 +351,7 @@ hr{
   display: block;
   text-align: center;
   font-family: 50px;
-
+  margin-top: 80px;
 }
 
 .event-listing{

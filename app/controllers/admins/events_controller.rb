@@ -1,4 +1,5 @@
 class Admins::EventsController < AdminsController
+  before_action :check_if_admin
 
   def create
     @event = Event.new(event_params)
