@@ -5,7 +5,7 @@ class UsersController < ApplicationController
 	end
 
 	def show
-		@events = current_user.events
+		@events = current_user.events.order('date_time')
 	end
 
 	def create
