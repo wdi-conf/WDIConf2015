@@ -2,15 +2,12 @@
     <h2>Choose an event to see the attendees</h2>
 
     <table class="admin" border="1">
-      <tr><th>Title</th><th>Tickets Sold</th><th>Maximum Tickets</th><th>Edit</th><th>Delete</th></tr>
+      <tr><th>Title</th><th>Tickets Sold</th><th>Maximum Tickets</th></tr>
     <% @events.each do |event| %>
         <tr>
             <td class="admin-left"><%= link_to event.title, admins_attendee_path(event) %></td>
             <td><%= event.tickets_sold %></td>
             <td><%= event.max_tix %></td>
-            <td><%= link_to 'edit', edit_admins_event_path(event) %></td>
-
-            <td><%= link_to 'Destroy', admins_event_path(event), method: :delete %></td>
         </tr>
     <% end %>
     </table>

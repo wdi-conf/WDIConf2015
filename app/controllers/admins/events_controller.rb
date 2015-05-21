@@ -9,7 +9,7 @@ class Admins::EventsController < AdminsController
   end
 
   def index
-    @events = Event.all
+    @events = Event.order('date_time')
   end
 
   def show
@@ -38,6 +38,7 @@ class Admins::EventsController < AdminsController
 
   def edit
     @event = Event.find(params[:id])
+    @user_list = @event.users.order('user_id')
   end
 
   def destroy
