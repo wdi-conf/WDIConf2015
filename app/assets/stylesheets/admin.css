@@ -50,7 +50,7 @@ input.textbox-300 {
 }
 .admin th {
     font-size:12px;
-    background-color: #4d4b4b;
+    background-color: #e74c3c;
     border-width: 1px;
     padding: 8px;
     border-style: solid;
@@ -66,6 +66,7 @@ input.textbox-300 {
     padding: 8px;
     border-style: solid;
     border-color: #686767;
+    text-align: left;
 }
 .admin-left{
     text-align: left;

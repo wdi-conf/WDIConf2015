@@ -2,16 +2,17 @@
     <h2>Events</h2>
 
     <table class="admin" border="1">
-      <tr><th>Title</th><th>Time</th><th>Tickets Sold</th><th>Maximum Tickets</th><th>Edit</th><th>Delete</th></tr>
+      <tr><th>Title</th><th>Time</th><th>Tickets Sold</th><th>Maximum Tickets</th><th></th><th></th></tr>
     <% @events.each do |event| %>
         <tr>
-            <td class="admin-left"><%= link_to event.title, admins_event_path(event) %></td>
+            <!-- <td class="admin-left"><%#= link_to event.title, admins_event_path(event) %></td> -->
+            <td class="admin-left"><%= event.title %></td>
             <td><%= event.date_time.to_s[11,5] %></td>
             <td><%= event.tickets_sold %></td>
             <td><%= event.max_tix %></td>
-            <td><%= link_to 'edit', edit_admins_event_path(event) %></td>
+            <td><%= link_to 'Edit', edit_admins_event_path(event) %></td>
 
-            <td><%= link_to 'Destroy', admins_event_path(event), method: :delete %></td>
+            <td><%= link_to 'Delete', admins_event_path(event), method: :delete %></td>
         </tr>
     <% end %>
     </table>

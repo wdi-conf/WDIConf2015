@@ -30,6 +30,7 @@ class Admins::AttendeesController < AdminsController
     @attendence.destroy
 
     redirect_to "/admins/attendees/#{params[:event_id]}"  #todo may be a helper method for this?
+    # redirect_to admins_attendee_path ??
   end
 
   private
