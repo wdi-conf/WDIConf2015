@@ -11,7 +11,7 @@
         <p class="bio hor-allign hidden">
           <%= speaker.bio %>
         </p>
-        <%= image_tag(speaker.photo_url, :class => "speaker_img")%>
+        <%= image_tag(speaker.photo_url, :class => "speaker_img") if speaker.photo? %>
         <span class="name"><strong><%= speaker.name %></strong></span>
       </div>
     <% end %>
