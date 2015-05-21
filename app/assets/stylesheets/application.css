@@ -14,6 +14,9 @@
  *= require_self
  */
 
+html{
+
+}
 
 html, body{
   height: 100%;
@@ -21,7 +24,9 @@ html, body{
   margin: 0;
   font-family: raleway;
   background: linear-gradient(135deg, rgba(0,0,0,0) 50%, rgba(0,0,0,0.5) 50%) fixed;
-
+/*  -webkit-transform: translate3d(0, 0, 0);
+  -webkit-backface-visibility: hidden;
+  -webkit-perspective: 1000;*/
 
 }
 
@@ -34,6 +39,7 @@ nav{
   width: 150px;
   text-transform: uppercase;
   overflow: hidden;
+  z-index: 1;
 }
 nav ul{
   padding: 0;
@@ -66,8 +72,11 @@ nav .fa{
 }
 
 nav .fa-bars{
-  /*color: #e74c3c;*/
   font-size: 30px;
+}
+
+.nav-toggle{
+  display: none;
 }
 
 
@@ -144,6 +153,7 @@ nav ul{
 .default-container{
   width: 70%;
   margin: auto;
+  padding-left: 75px;
 }
 
 .home img{
@@ -175,6 +185,9 @@ nav ul{
 
 hr{
   width: 50%;
+  border: 0;
+  height: 1px;
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
 }
 
 
@@ -223,6 +236,8 @@ hr{
   margin: 0;
   color: white;
   text-align: center;
+  padding: 10%;
+  font-size: 1vw;
 }
 
 
@@ -282,6 +297,22 @@ hr{
 }
 
 
+/*---SPONSORS---*/  
+  .sponsors-title{
+      display: block;
+  font-size: 50px;
+  font-weight: 500;
+  text-align: center;
+  color: white;
+  }
+
+  .sponsors-tagline{
+    text-align: center;
+    color: white;
+    display: block;
+  }
+
+
 
 
 /*---MEDIA QUERIES---*/
@@ -292,6 +323,30 @@ hr{
 
     .home img{
       width: 100%;
+    }
+
+    .default{
+      margin-left: -150px;
+    }
+
+    .nav-toggle{
+      display: inline-block;
+      position: fixed;
+      top: 0;
+      left: 0;
+      font-size: 2em;
+      color: white;
+      font-size: 3em;
+    }
+    .nav-toggle-slide{
+  transform: translateX(150px);
+  transition: 0.3s ease all;
+  }
+    nav .fa-bars{
+      display: none;
+    }
+
+    p{
     }
 
     .speaker-listing{
@@ -307,7 +362,7 @@ hr{
 
 
   .default-container{
-    /*padding-left: 50px;*/
+    padding-left: 0px;
   }
 
   .speaker-listing .name{

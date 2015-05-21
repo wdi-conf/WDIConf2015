@@ -11,7 +11,7 @@
         <p class="bio hor-allign hidden">
           <%= speaker.bio %>
         </p>
-        <%= image_tag('dom.jpg', :class => "speaker_img")%>
+        <%= image_tag(speaker.photo, :class => "speaker_img")%>
         <span class="name"><strong><%= speaker.name %></strong></span>
       </div>
     <% end %>
