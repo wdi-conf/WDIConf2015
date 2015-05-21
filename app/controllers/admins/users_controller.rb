@@ -9,7 +9,7 @@ class Admins::UsersController < AdminsController
   end
 
   def index
-    @users = User.all
+    @users = User.order('name')
   end
 
   def show
