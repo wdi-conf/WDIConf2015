@@ -10,7 +10,12 @@ class SessionController < ApplicationController
     if @user && @user.authenticate(params[:password])
       session[:user_id] = @user.id
       # correct password
-      redirect_to user_path(@user.id)
+
+      if @user.admin
+        redirect_to admins_path
+      else
+        redirect_to user_path(@user.id)
+      end
     else
       # incorrect email or password
       redirect_to :back, :notice => "Login was unsuccessful. Please try again."

@@ -8,7 +8,10 @@ class PhotoUploader < CarrierWave::Uploader::Base
   # include CarrierWave::MiniMagick
 
   # Choose what kind of storage to use for this uploader:
-  storage :file
+
+  # using free cloudinary on Heroku since heroku deletes files according to DT.
+  include Cloudinary::CarrierWave if Rails.env.production?
+  storage :file if Rails.env.development?
   # storage :fog
 
   # Override the directory where uploaded files will be stored.

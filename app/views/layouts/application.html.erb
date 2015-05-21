@@ -7,7 +7,7 @@
   <%= csrf_meta_tags %>
   <link href='http://fonts.googleapis.com/css?family=Raleway:100,400' rel='stylesheet' type='text/css'>
   <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
-  <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css">
+  <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 
@@ -29,7 +29,7 @@
       <div class="logged-in">
         <%= link_to current_user.name, user_path(current_user.id) %>
         <%= form_tag '/logout', :method => :delete do %>
-          <button>Logout</button>
+          <li><button class="admin-btn">Logout <i class="fa fa-sign-out"></i></button></li>
         <% end %>
       </div>
       <% else %>
@@ -45,7 +45,7 @@
 
   <!-- Display any errors (in a popup) -->
   <% if flash[:notice] %>
-    <div class="modal-background notice" id="join-event-modal">
+    <div class="modal-background notice">
       <div class="modal">
         <div class="close-modal">X</div>
         <%= flash[:notice] %>

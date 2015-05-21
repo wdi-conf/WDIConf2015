@@ -1,13 +1,29 @@
 <div class="home red-page hor-allign" id="home">
-  <div class="default-container">
-    <div data-sr class="hor-wrapper">
-    <%= image_tag('logowhite.png', :class=> "home-logo span-6")%>
-    <p>
-      WDI Conf returns for a second year this May. After a successful inaugural conference, WDI Conf will again present talks by established and emerging tech experts. Located in the heart of the city, the conference aims to showcase why Melbourne is considered at the forefront of the tech movement.
-    </p>
-    <div id="bounce-arrow"><a data-scroll href="#about"><i class="fa fa-chevron-circle-down"></a></i></div>
-    </div>
-  </div>
+
+	<div class="default-container">
+		<div data-sr="reset" class="hor-wrapper">
+			<%= image_tag('logowhite.png', :class=> "home-logo span-6")%>
+		</div>
+		<div data-sr="reset" id="details-overview">
+
+        <div class="span-4" id="melbourne">
+          <h2>Melbourne</h2>
+        </div>
+
+        <div class="span-3" id="wdi-details">
+          <h3>22nd May 2015</h3>
+          <h4>20 Queen St, CBD</h4>
+        </div>
+
+      </div>
+
+			<div id="bounce-arrow">
+				<a data-scroll href="#about">
+					<i class="fa fa-chevron-circle-down"></i>
+				</a>
+			</div>
+	</div>
+
 </div>
 
 
@@ -18,8 +34,6 @@
 <%= render 'speakers' %>
 
 <%= render 'sponsors' %>
-
-<%= render 'team' %>
 
 <%= render 'contact' %>
 

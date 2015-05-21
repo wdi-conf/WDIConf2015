@@ -9,7 +9,7 @@
 			<div class="each-ticket">
 				<div class="ticket-details">
 					<div class="ticket-time">
-						22/5/15 <span>9:30 am</span>
+						<%= event.date_time.to_s[0,10] %> <span><%= event.date_time.to_s[11,5] %></span>
 					</div>
 					<h3><%= event.title %></h3>
 				<p class="event-speaker">- <%= event.speaker.name %></p>

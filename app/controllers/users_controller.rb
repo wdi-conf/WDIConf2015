@@ -5,7 +5,7 @@ class UsersController < ApplicationController
 	end
 
 	def show
-		@events = current_user.events
+		@events = current_user.events.order('date_time')
 	end
 
 	def create
@@ -30,8 +30,7 @@ class UsersController < ApplicationController
     		redirect_to :back, notice: "Something went wrong! Please try again."
     	end
     else
-    	flash[:notice] = "Your account could not be created. Please try again."
-      render "events/show"
+      redirect_to root_path, notice: "Your ticket could not be confirmed. Please try again."
     end
 	end
 

@@ -9,7 +9,7 @@ class Admins::UsersController < AdminsController
   end
 
   def index
-    @users = User.all
+    @users = User.order('name')
   end
 
   def show
@@ -38,7 +38,7 @@ class Admins::UsersController < AdminsController
   private
 
   def user_params
-    params.require(:user).permit(:name, :email, :bio, :photo)
+    params.require(:user).permit(:name, :email, :bio, :photos)
   end
 
 end
