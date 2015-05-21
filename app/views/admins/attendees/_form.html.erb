@@ -1,15 +1,15 @@
- <%= form_for [:admins, @attendee] do |f| %>  <!--need :admins since namespaced-->
-     <div class="admin">
-        <fieldset>
-             <legend>Add attendee</legend>
+<%= form_for [:admins, @attendee] do |f| %>  <!--need :admins since namespaced-->
+	<div class="admin">
+    <fieldset>
+    	<legend>Add attendee</legend>
 
-          <p><%= f.label "person", :class =>'admin-field' %></p>
-          <p><%= f.collection_select(:id,@attendee,:id,:name) %></p>
+      <p><%= f.label "Person", :class =>'admin-field' %></p>
+      <!-- <p><%#= f.collection_select(:id,@attendee,:id,:name) %></p> -->
 
-             <p><%= f.submit :class =>'admin-btn' %></p>
-         </fieldset>
-     </div>
- <% end %>
+      <p><%= f.submit :class =>'admin-btn' %></p>
+    </fieldset>
+	</div>
+<% end %>
 
- <!--http://api.rubyonrails.org/classes/ActionView/Helpers/FormHelper.html-->
+<!--http://api.rubyonrails.org/classes/ActionView/Helpers/FormHelper.html-->
 
