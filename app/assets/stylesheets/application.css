@@ -26,6 +26,7 @@ html, body{
 
 }
 
+
 nav{
   position: fixed;
   text-align: right;
@@ -149,13 +150,16 @@ nav ul{
 .white-page-small{
   width: 100%;
   min-height: 60%;
-  background-color: rgba(235,235,235,0.9);
+  background-color: rgba(235,235,235,1);
 }
 
 .default-container{
   width: 70%;
   margin: auto;
   padding-left: 50px;
+    -webkit-transform: translate3d(0, 0, 0);
+  -webkit-backface-visibility: hidden;
+  -webkit-perspective: 1000;
 }
 
 .home img{
