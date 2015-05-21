@@ -168,6 +168,7 @@ nav ul{
   text-align: center;
   color: white;
   font-size: 50px;
+  /*margin-top: 50px;*/
 }
 
 #bounce-arrow a{
@@ -185,6 +186,40 @@ hr{
   height: 1px;
   background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
 }
+
+#details-overview {
+  text-align: center;
+  color: white;
+  height: 100px;
+  margin-bottom: 50px;
+}
+
+#melbourne {
+  line-height: 100%;
+  border-top: solid white 2px;
+  border-bottom: solid white 2px;
+  margin-right: -5px;
+}
+
+#melbourne h2 {
+  font-size: 2.3em;
+}
+
+#wdi-details {
+  border-top: solid white 2px;
+  border-bottom: solid white 2px;
+}
+
+#wdi-details h3, h4{
+  text-align: left;
+  line-height: 60%;
+}
+
+#wdi-details h4 {
+  margin-bottom: 17.5px;
+}
+
+
 
 
 
@@ -276,7 +311,7 @@ hr{
 }
 
 .active{
-  opacity: 1; 
+  opacity: 1;
   transition: 0.3s ease all;
 }
 
@@ -294,7 +329,7 @@ hr{
 }
 
 
-/*---SPONSORS---*/  
+/*---SPONSORS---*/
   .sponsors-title{
       display: block;
   font-size: 50px;
@@ -411,6 +446,53 @@ hr{
 
 /*---MEDIA QUERIES---*/
 
+@media screen and (max-width: 1000px) {
+  #melbourne {
+    border-bottom: none;
+  }
+
+  #melbourne h2 {
+    font-size: 1.5em;
+  }
+
+  #wdi-details {
+    display: block;
+    border-top: none;
+    margin: 0 auto;
+    width: 33.33332%;;
+  }
+
+  #wdi-details h3, h4{
+    font-size: .8em;
+    text-align: center;
+  }
+
+  #wdi-details h3 {
+    margin-top: 0;
+  }
+}
+
+@media screen and (max-width: 700px) {
+
+  #melbourne {
+    width: 50%;
+  }
+
+ #melbourne h2 {
+    font-size: 1em;
+  }
+
+  #wdi-details {
+    width: 50%;;
+  }
+
+  #wdi-details h3, h4{
+    font-size: .6em;
+  }
+
+}
+
+
 @media only screen
   and (max-device-width: 736px)
  {
@@ -462,6 +544,7 @@ hr{
   .speaker-listing .name{
     /*font-size: 10px;*/
   }
+
 
 
 }
