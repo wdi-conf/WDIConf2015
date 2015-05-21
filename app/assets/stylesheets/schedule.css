@@ -1,15 +1,16 @@
-.grid-schedule { 
+/*.grid-schedule { 
   margin: 0 auto;
   display: inline-block;
-  width: 80%%;
-  margin-left: 13%;
-}
+  width: 100%;*/
+
+/*}
 
 .page-title {
   font-family: 'Raleway';
   color: #e74c3c;
   font-size: 40px;
-  margin-left: 4em;
+  display: block;
+  text-align: center;
 }
 
 .ih-item {
@@ -41,12 +42,12 @@
 
 .ih-item.square {
   background-color: white;
-/*  background: linear-gradient(135, white, lightgrey);*/
+
   color: rgba(231, 76, 60, 1.0);
   position: relative;
-  width: 316px;
+  width: 30%;
   height: 216px;
-  border: 2px solid rgba(231, 76, 60, 1.0);
+
   box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
 }
 .ih-item.square .info {
@@ -58,10 +59,10 @@
   text-align: center;
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
-}
+}*/
 
 /*************************************/
-
+/*
 
 .ih-item.square.effect3 {
   overflow: hidden;
@@ -126,26 +127,24 @@
   -ms-transform: translateY(0);
   -o-transform: translateY(0);
   transform: translateY(0);
-}
+}*/
 
 
 /* BOOK NOW BUTTON STYLING*/
-  .btnBookNow-sq {
+/*  .btnBookNow-sq {
     font-family: 'Raleway';
     height: 65px;
-    width: 316px;
+    width: 100%;
     display: block;
     border: none;
     background: rgba(231, 76, 60, 1.0);
     padding: 4px 8px;
-   /*font-family: 'Roboto Condensed', Arial, Sans-Serif;*/
     text-decoration: none;
     vertical-align: middle;
     position: absolute;
     bottom: 0px;
     font-size: 20px;
     color: white;
-    border-shadow: ;
    }
   .btnBookNow-sq a {
     color: white;
@@ -158,4 +157,4 @@
    }
   .btnBookNow:active {
    background: #1b435e;
-   }
+   }*/
