@@ -1,31 +1,52 @@
-<div class="schedule white-page hor-allign" id="schedule">
+<div class="schedule red-page hor-allign" id="schedule">
   <div class="default-container">
     <div class="hor-wrapper">
       <span class="schedule-title">Schedule</span><hr>
 
-		<% @events.each do |event| %>
-      <div data-sr="reset" class="event-listing">
-          <div class="listing-banner">
-            <span class="listing-name"><strong><%= event.speaker.name %></strong></span>
-					 <span class="listing-time"><%= event.date_time.to_s[11,5] %></span>
-          </div>
 
-          <div class="listing-details hor-allign">
-          <%= image_tag('placeholder.gif', :class=> "blank")%>
-          <span class="listing-title"><%= event.title %></span>
+      <ul class="left">
+
+        <% @events_left.each do |event| %>
+        <li class="animate fadeInLeft" data-anim-type="fadeInLeft">
+          <% if logged_in? %>
+            <%= link_to "/events/#{event.id}/join", method: :post, class: "join-event-modal" do %><i class="fa fa-book"></i>
+            <% end %>
+          <% else %>
+          <i class="fa fa-book join-event-modal" data-event-id="<%= event.id %>"></i>
+          <% end %>
+
+          <h5><%= event.title %> <span>- <%= event.date_time.to_s[11,5] %></span></h5>
           <p><%= event.description %></p>
-      <% if logged_in? %>
-				<button class="btnBookNow-sq">
-					<%= link_to 'Attend', "/events/#{event.id}/join", method: :post %>
-				</button>
-			<% else %>
-				<button class="btnBookNow-sq join-event-modal" data-event-id="<%= event.id %>">BOOK</button>
-			<% end %>
+
+        </li>
+        <% end %>
+
+
+      </ul>
+
+      <ul class="right">
+
+        <% @events_left.each do |event| %>
+        <li class="animate fadeInRight" data-anim-type="fadeInRight">
+          <% if logged_in? %>
+            <%= link_to "/events/#{event.id}/join", method: :post, class: "join-event-modal" do %><i class="fa fa-book"></i>
+            <% end %>
+          <% else %>
+          <i class="fa fa-book join-event-modal" data-event-id="<%= event.id %>"></i>
+          <% end %>
+          <h5><%= event.title %></h5>
+          <p><%= event.description %></p>
+        </li>
+        <% end %>
+
+      </ul>
+
+
+
+
     </div>
-      </div>
-     <% end %>
-      </div>
 
 
-   </div>
+  </div>
 </div>
+
