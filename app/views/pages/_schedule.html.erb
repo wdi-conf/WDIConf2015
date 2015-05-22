@@ -26,7 +26,7 @@
 
       <ul class="right">
 
-        <% @events_left.each do |event| %>
+        <% @events_right.each do |event| %>
         <li class="animate fadeInRight" data-anim-type="fadeInRight">
           <% if logged_in? %>
             <%= link_to "/events/#{event.id}/join", method: :post, class: "join-event-modal" do %><i class="fa fa-book"></i>
