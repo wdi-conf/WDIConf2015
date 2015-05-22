@@ -1,18 +1,18 @@
-require 'rails_helper'
+# require 'rails_helper'
 
-RSpec.describe Admins::EventsController do
-  describe "GET index" do
-    it "shows a page with admin footer" do
-      get :index
-      expect(response).to render_template("admins/events/index")
-    end
+# RSpec.describe Admins::EventsController do
+#   describe "GET index" do
+#     it "shows a page with admin footer" do
+#       get :index
+#       expect(response).to render_template("admins/events/index")
+#     end
 
-    it "renders the index template" do
-      get :index
-      expect(response).to render_template("index")
-    end
-  end
-end
+#     it "renders the index template" do
+#       get :index
+#       expect(response).to render_template("index")
+#     end
+#   end
+# end
 
 =begin
 describe PostsController do
