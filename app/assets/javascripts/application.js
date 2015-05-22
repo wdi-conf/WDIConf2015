@@ -13,3 +13,6 @@
 //= require jquery
 //= require jquery_ujs
 //= require_tree .
+
+
+$( "body:not(#navbar)" ).css( "transform", "translate3d(0, 0, 0)" );

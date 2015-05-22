@@ -8,14 +8,10 @@ var bio = document.getElementsByClassName('bio');
       $(bio).toggleClass("active");
       $(bio).toggleClass("hidden");
   });
+
 });
 
 // FOR BOUNCING ARROW ON HOMEPAGE LOAD
-
-
-// window.setInterval(function bounceArrow(){
-// $( "#bounce-arrow" ).effect( "bounce", { times: 3 }, "slow" );
-// }, 5000);
 
 window.setInterval(function bounceArrow(){
 $( "#bounce-arrow" ).effect( "bounce", { times: 1 }, 2500 );
