@@ -35,6 +35,9 @@ If there are any errors in the above, try the following:
 
 you can drop the test database with: *rake db:drop RAILS_ENV=test*
 
+Seed the data with rake db:seed
+Seed the phots with custom rake task => rake:photos:photos_seed
+
 
 
 

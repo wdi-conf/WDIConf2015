@@ -30,7 +30,7 @@ User.create(id: 8, name: 'Aden Margheriti', email: 'aden@gmail.com', password: '
 User.create(id: 9, name: 'Jaya Wijono', email: 'jaya@gmail.com', password: 'password', bio: "Despite Jaya’s calm exterior, inside him beats the heart of a revolutionary. In the face of current trends, Jaya is an avowed fan of Internet Explorer, and in his talk “Internet Explorer is the Greatest Browser for Installing Other Browsers”, Jaya takes us through with calm and reasoned arguments why IE is the stepping stone towards browser perfection.", admin: false)
 User.create(id: 10, name: 'Beta Ngadiman', email: 'beta@gmail.com', password: 'password', bio: "There are experts in back-end frameworks and then there is Beta Ngadiman. Beta lives, eats and breathes back-end. So much so that he has kindly surfaced from his server cave to share his expertise in a talk entitled “Set the Tables in Order. A Database Love Story.” Recommended for the romantics amongst us", admin: false)
 User.create(id: 11, name: 'Phillip Castiglione', email: 'phil@gmail.com', password: 'password', bio: "Philip has quickly become novice to master in terms of coding quicker than you can say Test Driven Development. Philip’s ability to retain data has already had ASIO on the phone, and in his talk; ‘Better Coding Through Sleeping’, Phil shares with us mere mortals the path to coding Nirvana.", admin: false)
-User.create(id: 12, name: "Jarod O'Loughlan", email: 'jarod@gmail.com', password: 'password', bio: "AFAIK Jared is the founding member of AAAA (Association Against Acronym Abuse). His presence at Conf 2015 was only secured when we told him we’d drop the WDI component of the conference’s title. Jared’s talk Acronyms in Tech. A Userguide: Talking Sass, CSS, HTML, IDK, WTF will assist those trying to break into tech, but are turned off by the use of Acronyms. Sometimes you have to learn the rules in order to break them. LOL IKR ANAWFOS", admin: false)
+User.create(id: 12, name: %Q{Jarod O'loughlan}, email: 'jarod@gmail.com', password: 'password', bio: "AFAIK Jared is the founding member of AAAA (Association Against Acronym Abuse). His presence at Conf 2015 was only secured when we told him we’d drop the WDI component of the conference’s title. Jared’s talk Acronyms in Tech. A Userguide: Talking Sass, CSS, HTML, IDK, WTF will assist those trying to break into tech, but are turned off by the use of Acronyms. Sometimes you have to learn the rules in order to break them. LOL IKR ANAWFOS", admin: false)
 User.create(id: 13, name: 'JC Lee', email: 'jc@gmail.com', password: 'password', bio: "JC is a powerhouse within the local tech community. She is here to present a new game currently in development ‘Mildly Irritated Byrds’ and her new app ‘Milohuntr’. Download code for ‘Mildly Irritated Byrds’ free with every tin of Milo purchased", admin: false)
 User.create(id: 14, name: 'Louis Moore', email: 'louis@gmail.com', password: 'password', bio: "Louis is an emerging tech expert who is focussed on back-end frameworks. A passionate gamer, Louis is currently driven by the concept of open-source gaming. Louis will be giving a talk about the exciting realms of open-source gaming, showing his own creations and helping novice game developers to dive into the open-source gaming community. His talk entitled “What’s Yours is MineCraft”, is mandatory for gamers and game-makes alike", admin: false)
 User.create(id: 15, name: 'Daniel Tsui', email: 'daniel@gmail.com', password: 'password', bio: "Daniel is a legend amongst the local tech community. He is continually supporting meet ups and other developers by turning up to consume the free food on offer. Daniel – or Dt to those in the know – is unveiling his new app ‘GoodFoodMeetUpHunting (GFMUH, pronounced gif-muh) which aims to give directions to every meet-up in the city of Melbourne with a detailed break down of the type and quality of food on offer at each of the Melbourne meet ups. Digitally delicious.", admin: false)
@@ -293,20 +293,6 @@ Attendee.create(user_id: 13, event_id: 16, user_role: 'user')
 Attendee.create(user_id: 14, event_id: 16, user_role: 'user')
 Attendee.create(user_id: 15, event_id: 16, user_role: 'user')
 Attendee.create(user_id: 16, event_id: 16, user_role: 'speaker')
-
-uploader = PhotoUploader.new
-# photo_file_name = %w{aden, beta, dom, dt, jarod, jaya, jc, jeff, justin, louis, luke, matt, matts, mike, nick, phil}
-# Seeds photos from file structure to something Carrierwave should be able to use
-names = {'matt' => 'Matt Cameron', 'dom' => 'Dom White', 'mike' => 'Mike Goodwin', 'jeff' => 'Jeff Wolff', 'luke' => 'Luke Shillabeer', 'justin' => 'Justin Ward', 'nick' => 'Nick Pateman', 'aden' => 'Aden Margheriti', 'jaya' => 'Jaya Wijono', 'beta' => 'Beta Ngadiman', 'phil' => 'Phillip Castiglione', 'jarod' => "Jarod O'loughlan", 'jc' => 'JC Lee', 'louis' => 'Louis Moore', 'dt' => 'Daniel Tsui', 'Matt' => 'Matt Swann' }
-names.each do |photo_name, full_name|
-  user = User.find_by(name: full_name)
-  file_name = "./db/photos/" + photo_name + ".jpg"
-  the_file = File.open file_name
-  unless user == nil # one of the key value pairs must not be returning the correct record because one is nil.
-    user.photo = the_file
-  end
-  #uploader.store!(the_file) # todo currently breaks so commented out
-end
 
 
 
