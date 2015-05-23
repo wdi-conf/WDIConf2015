@@ -222,7 +222,7 @@ hr{
 }
 
 #wdi-details h4 {
-  margin-bottom: 17.5px;
+  margin-bottom: 17px;
 }
 
 
@@ -244,7 +244,8 @@ hr{
   display: block;
   text-align: center;
   font-size: 50px;
-  color: #e74c3c
+  color: #e74c3c;
+  margin-top: 80px;
 }
 
 .speaker-listing img{
@@ -339,21 +340,6 @@ hr{
 
   /*SCHEDULE PAGE*/
 
-  .schedule-title{
-  display: block;
-  font-size: 50px;
-  font-weight: 500;
-  text-align: center;
-  color: #e74c3c;
-  }
-
-.schedule-title{
-  display: block;
-  text-align: center;
-  font-family: 50px;
-  margin-top: 80px;
-}
-
 .event-listing{
   width: 100%;
   background: white;
@@ -407,23 +393,13 @@ hr{
 }
 
 .btnBookNow-sq{
-  background-color: #e74c3c;
-    /*height: 65px;*/
-    /*width: 100%;*/
-    /*display: block;*/
+  background-color: #fff;
     border: none;
-    /*padding: 4px 8px;*/
     text-decoration: none;
-    vertical-align: middle;
-    position: absolute;
-    bottom: 0px;
-    right: 0;
-    /*font-size: 20px;*/
-    color: white;
+    color: #e74c3c;
     font-family: raleway;
     width: 100px;
     height: 40px;
-    border-bottom: 1px solid white;
 }
 
 .btnBookNow-sq a, .btnBookNow-sq a:visited{
