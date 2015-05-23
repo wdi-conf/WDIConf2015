@@ -6,5 +6,5 @@ class User < ActiveRecord::Base
 	validates :name, :email, presence: true
   
   validates :password, presence: true, :on => :create
-  mount_uploader :photos, PhotoUploader
+  mount_uploader :photo, PhotoUploader
 end
