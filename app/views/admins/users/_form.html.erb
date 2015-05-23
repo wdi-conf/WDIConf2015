@@ -14,9 +14,11 @@
 -->
              <p><%= f.label :bio, :class =>'field' %></p>
              <p><%= f.text_field :bio, :class =>'textbox-300'  %></p>
+             
+             <%= image_tag(@user.photo_url) if @user.photo? %>
              <p> 
                 <label for="">Upload File</label>
-                <%= f.file_field :photos %>
+                <%= f.file_field :photo %>
              </p> 
 
              <p><%= f.submit :class =>'admin-btn'%></p>
