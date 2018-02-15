@@ -48,7 +48,7 @@ WDI Conf is a website created for a semi-fictional tech conference. The site was
 Justin: Back end. Deployment
 Dominic: Login in authentication, back end
 Mike: Git Lord, back end
-Aden: CSS master
+Bob: CSS master
 Matt: Database concepts and design, back end
 Jeff: Project manager
 Nick: Content manager
